@@ -711,6 +711,7 @@
     .tab {
       display: inline-block;
       background-color: $white;
+      border: none;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       padding: 0.5em;
@@ -773,10 +774,13 @@
         flex-basis: 50%;
       }
       .monthly {
-        font-size: 3em;
+        font-size: 2em;
         text-align: center;
         padding-bottom: 0;
         margin-bottom: 0;
+          @media (min-width: $bp-medium) {
+            font-size: 3em;
+          }
       }
       .annual {
         font-size: 1em;

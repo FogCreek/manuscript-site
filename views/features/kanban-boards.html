@@ -1,0 +1,39 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--kanbanboards PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    8. Kanban Boards
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Keep your Agile work flowing.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FMap.svg?1509027917331" />
+    Kanban Boards
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Create, reorder and close columns of tasks to match your workflow. Just drag and drop cases between columns to indicate progress or re-order them to specify a different priority.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FInfo.svg?1509025644501" />    
+    Provide Context Beyond Your Dev Team
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>The current Kanban column for a case is displayed on the case and list pages too, allowing other team members to know the status of each case.</p>
+    <p>They can also edit the case to update the column too.</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      Get Started with 14 Days Free
+    </h1>
+  </div>
+</section>
+
+<section class="Section Signup">
+  <div class="Section__content">
+    <form id="signup-form" class="Form Form--signup fogBugzFormHostedOrderForm" method="POST" action="/signup/">
+      <header class="Form__section-header-group">
+        <div class="Form__section-header">
+          Choose your team name
+        </div>
+      </header>
+      <div class="Form__fields">
+        {{ forms.URLInput(name='subdomain', placeholder='yourcompany', type='text', required=true, pattern='(^[a-zA-Z0-9]+$)|(^[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9]$)', title='Team names can contain letters, numbers, and hyphens, but cannot start or end with a hyphen.')}}
+        <div class="Form__field-note subdomain"></div> 
+      </div>
+      <header class="Form__section-header-group">
+        <div class="Form__section-header">
+          About you
+        </div>
+        <div class="Form__section-subheader">
+          You'll be the Administrator.
+        </div>
+      </header>
+      <!--
+        To add an error state to any of these fields,
+        add a "has-error" class to the "Form__fields" div.
+        Then, you can put your error message in the "Form__field-note".
+      -->
+      <div class="Form__field-note global"></div>
+      <div class="Form__fields Form__fields--half-width">
+        <div class="Form__field Form__field--half-width">
+          {{ forms.TextInput(extraClass='Form__input', color='aqua', name='full_name', placeholder='Full Name', type='text', required=true, pattern='.*\\S+.*', title='Name must not be blank.')}}
+          <div class="Form__field-note name"></div>        
+        </div>
+        <div class="Form__field Form__field--half-width">
+          {{ forms.TextInput(extraClass='Form__input', color='pink', name='phone', placeholder='Phone', type='tel', required=true, pattern='.+')}}
+          <div class="Form__field-note phone"></div>        
+        </div>
+        <div class="Form__field Form__field--half-width">
+          {{ forms.TextInput(extraClass='Form__input', color='green', name='email', placeholder='Work Email', type='email', value=email, required=true, pattern='^[\\w\\.\\-\\+]+@[\\w\\.\\-]+\\.[a-zA-Z]+$', title='Email must be in the form of "email@example.com"')}}
+          <div class="Form__field-note email"></div>        
+        </div>
+        <div class="Form__field Form__field--half-width">
+          {{ forms.TextInput(extraClass='Form__input', color='yellow', name='password', placeholder='Password', type='password', required=true, pattern='^\\S.{4,}\\S$', title='Password must be at least 6 characters long and should not start or end with whitespace')}}
+          <div class="Form__field-note password"></div>        
+        </div>
+      </div>
+      <div class="Form__actions">
+        {{ forms.CheckboxInput(checked=true, name='accept_terms', label='Yes, I accept the <a href="https://shop.fogcreek.com/hostedtos.asp" target="_blank" class="TextLink">Terms of Service</a>', required=true)}}
+        {{ forms.Button(label='Let’s Go!', type='submit', color='blue', extraClasses='Form__submit')}}
+        
+      </div>
+
+      {{ forms.TextInput(extraClass='js-timezone', name='timezone', type='hidden')}}
+
+    </form>
+
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+<script src="/signup.js"></script>
+{% endblock content %}

@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+        <section class="Section Introduction">
+          <div class="Section__content">
+            <div class="Introduction__main">
+              <header class="SiteLogo">
+                <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo.svg?1508809305583" alt="Manuscript" class="SiteLogo__image" />
+              </header>
+              <h2 class="Introduction__tagline">
+                Go beyond done <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fcheck.svg?1508696440597" class="Introduction__check" /><br />
+                Craft great software.
+              </h2>
+              <div class="Introduction__signup">
+                <div class="GetStarted">
+                  <div class="GetStarted__header">
+                    Learn how Manuscript works.
+                  </div>
+                  <div class="GetStarted__subheader">
+                    The first 14 days are on us. No credit card required.
+                  </div>
+                  {{ forms.GetStartedForm() }}
+                </div>
+                <div class="LogIn">
+                  Already a user? <a href="/login">Log In</a>
+                </div>
+              </div>
+            </div>
+            <div class="Introduction__graphic">
+              <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fscreenshot-planner.png?1510002593139" alt="Manuscript Screenshot, Sprint Plan" class="Introduction__image Introduction__image--sprint" />
+              <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fscreenshot-filter.png?1510001115783" alt="Manuscript Screenshot, Cases" class="Introduction__image Introduction__image--cases" />
+              <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fscreenshot-integrations.png?1509999893626" alt="Manuscript Screenshot, Integrations" class="Introduction__image Introduction__image--chart" />
+            </div>
+
+          </div>
+        </section>
+
+        <section class="Section SoftwareThatMatters">
+          <div class="SoftwareThatMatters__color-border--1"></div>
+          <div class="SoftwareThatMatters__color-border--2"></div>
+          <div class="SoftwareThatMatters__color-border--3"></div>
+          <div class="SoftwareThatMatters__color-block"></div>
+          <div class="Section__content">
+            <div class="BigTextCallout">
+              <h3 class="BigTextCallout__header">
+                Building software<br />
+                that matters&hellip;
+              </h3>
+              <h4 class="BigTextCallout__subheader">
+                is more than a race to close issues. We know every team can craft great software, you just need the <strong>best tools</strong> and the <strong>right information</strong>.
+              </h4>
+            </div>
+            <div class="GraphicExample">
+              <div class="GraphicExample__graphic">
+                <img class="GraphicExample__image" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FHPimage1-cmyk.svg?1509674086837" alt="Shows how different tools feed into Manuscript" />
+              </div>
+              <div class="GraphicExample__copy">
+                <h5 class="GraphicExample__title">
+                  Best tools:
+                </h5>
+                <p>
+                  Manuscript provides all you need to make great software, including <strong>project management</strong>, <strong>issue tracking</strong>, and <strong>support</strong>, fused with just enough process to help you deliver.
+                </p>
+                <p>
+                  Plus, there’s robust integration with other best of breed tools like Slack, GitHub and Google Docs that’s free and fully customizable, using the power of <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ffish.svg?1509601807937" alt="Glitch logo" style="height: 1em; position: relative; top: 0.1em" /> Glitch — our friendly collaborative coding community.
+                </p>
+              </div>
+            </div>
+            <div class="GraphicExample GraphicExample--reverse">
+              <div class="GraphicExample__graphic">
+                <img class="GraphicExample__image" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FHP-illustration2.svg?1509048817811" alt="Manuscript screenshot" />
+              </div>
+              <div class="GraphicExample__copy">
+                <h5 class="GraphicExample__title">
+                  Right information:
+                </h5>
+                <p>
+                  Manuscript shows you the issue and project info you need, alongside updates from your integrated tools.
+                </p>
+                <p>As well as providing expert advice and insights from two decades of studying how great software really gets built.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="Section UpfrontPricing">
+          <div class="UpfrontPricing__color-block"></div>
+          <div class="Section__content">
+            <img class="UpfrontPricing__arm-1" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Farm1.svg?1508700954119" />
+            <img class="UpfrontPricing__arm-2" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Farm2.svg?1508700954119" />
+            <img class="UpfrontPricing__arm-3" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Farm3.svg?1508700954188" />
+            <div class="BigTextCallout BigTextCallout--flipped">
+              <h4 class="BigTextCallout__subheader">
+                Clear, upfront pricing.<br />
+                We don’t nickel and dime.
+              </h4>
+              <h3 class="BigTextCallout__header">
+                $10 per user, per month
+              </h3>
+              <h4 class="BigTextCallout__subheader purple">Until Spring 2018</h4>
+              <a href="/pricing" class="Button BigTextCallout__action">See Pricing</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="Section GreatSoftware">
+          <div class="GreatSoftware__color-border--1"></div>
+          <div class="GreatSoftware__color-border--2"></div>
+          <div class="GreatSoftware__color-border--3"></div>
+          <div class="GreatSoftware__color-block"></div>
+          <div class="Section__content">
+            <div class="BigTextCallout BigTextCallout--wide BigTextCallout--right">
+              <h3 class="BigTextCallout__header">
+                What’s “great” software?
+              </h3>
+              <h4 class="BigTextCallout__subheader">
+                It starts with software that ships on a predictable schedule, but goes far beyond that, with software that’s trusted by your community, thoughtful about user experience, and responsible in the ways it treats people & data.
+              </h4>
+            </div>
+          </div>
+          <div class="QuotePopouts">
+            <div class="QuotePopout QuotePopout--red QuotePopout--big">
+              <div class="QuotePopout__copy">Great Software&hellip;</div>
+              <div class="QuotePopout__endcap"></div>
+            </div>
+            <div class="QuotePopout QuotePopout--purple">
+              <div class="QuotePopout__copy"><strong>&hellip;is crafted by teams</strong> because no one works alone, and we only get better when we learn from each other.
+</div>
+              <div class="QuotePopout__endcap"></div>
+            </div>
+            <div class="QuotePopout QuotePopout--pink">
+              <div class="QuotePopout__copy"><strong>&hellip;is never done</strong> so you need an ongoing process, not just a checklist of tasks.</div>
+              <div class="QuotePopout__endcap"></div>
+            </div>
+            <div class="QuotePopout QuotePopout--green">
+              <div class="QuotePopout__copy"><strong>&hellip;matters</strong> because it’s what’s driving your business (and the rest of the world) forward.</div>
+              <div class="QuotePopout__endcap"></div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="Section HowItWorks">
+          <div class="HowItWorks__color-block"></div>
+          <div class="HowItWorks__background-shape"></div>
+          <div class="Section__content">
+            <div class="BigTextCallout BigTextCallout--wide BigTextCallout--right">
+              <h3 class="BigTextCallout__header">
+                Why Choose Manuscript?
+              </h3>
+              <h4 class="BigTextCallout__subheader">
+                Based on the engine of FogBugz, the platform that pioneered bug tracking, Manuscript is a purpose built project management tool for software teams.
+              </h4>
+            </div>
+
+            <div class="HowItWorks__video">
+              <iframe class="HowItWorks__embed" src="https://www.youtube-nocookie.com/embed/fkmvgEiQNwk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+
+        <section class="Section MadeBy">
+          <div class="MadeBy__color-border--1"></div>
+          <div class="MadeBy__color-border--2"></div>
+          <div class="MadeBy__color-border--3"></div>
+          <div class="MadeBy__color-block"></div>
+          <div class="Section__content">
+            <h4 class="MadeBy__header">
+              Crafted by Fog Creek Software, the creators of Glitch.<br />We invented Trello, and cofounded Stack Overflow.<br />
+            </h4>
+            <div class="MadeBy__logos">
+              <img class="MadeBy__logo MadeBy__logo--apple" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fapple.svg?1508733187419" alt="Apple" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmit.svg?1508733187419" alt="MIT" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fnvidia.svg?1508733187419" alt="NVidia" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmicrosoft.svg?1508733187419" alt="Microsoft" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fnasa.svg?1508733187419" alt="NASA" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fintel.svg?1508733187419" alt="Intel" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fibm.svg?1508733187419" alt="IBM" />
+              <img class="MadeBy__logo" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Funity.svg?1508733187419" alt="Unity" />
+            </div>
+          </div>
+
+        </section>
+
+        <section class="Section GetStartedBottom">
+          <div class="GetStartedBottom__color-block"></div>
+          <div class="Section__content">
+            <div class="GetStartedBottom__copy">
+              <h4 class="GetStartedBottom__header">
+                  Learn how Manuscript works:
+              </h4>
+              <p class="GetStartedBottom__subheader">
+                The first 14 days are on us. No credit card required.
+              </p>
+            </div>
+            {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='pink', buttonColor='blue') }}
+          </div>
+        </section>
+{% endblock content %}

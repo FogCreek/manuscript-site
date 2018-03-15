@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle PageTitle--pricing PageTitle--has-background">
+  <div class="Section__content">
+    <h2 class="PageTitle__subheader LimitedOffer">
+      limited offer until spring 2018
+    </h2> 
+    <h1 class="PageTitle__header PageTitle__header--strong">
+      $10 per user, per month.
+    </h1>
+ 
+    <div class="PageTitle__action">
+      <div class="GetStarted">
+        {{ forms.GetStartedForm(location='pricing', inputColor='purple', buttonColor='red') }}
+      </div>
+    </div>
+    <div class="PageTitle__background-arms">
+      <img class="PageTitle__background-arm-1" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Farm%203%20money.svg?1519684502855" />
+      <img class="PageTitle__background-arm-2" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Farm%202%20money.svg?1519684502636" />
+      <img class="PageTitle__background-arm-3" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Farm%201%20money.svg?1519684502501" />
+    </div>
+  </div>
+</section>
+
+<section class="PricingBreakdown">
+  <div class="PricingBreakdown__color-border--1"></div>
+  <div class="PricingBreakdown__color-border--2"></div>
+  <div class="PricingBreakdown__color-border--3"></div>
+  <div class="PricingBreakdown__color-block"></div>
+  <div class="Section__content">
+    <div class="BigTextCallout">
+      <h3 class="BigTextCallout__header">
+        Standard Pricing
+      </h3>
+    </div>
+    <div class="PricingChart">
+      {{ forms.Button(label='In the Cloud',extraClasses='ProductToggle js-toggle-od checked') }}
+      {{ forms.Button(label='On Premises',extraClasses='ProductToggle js-toggle-op') }}
+      <div class="OnDemand">
+        <div class="UserDropdown">
+          <p>
+            Number of users
+          </p>
+          <select>
+            <option value="0">5</option>
+            <option value="1">10</option>
+            <option value="2">15</option>
+            <option value="3">25</option>
+            <option value="4">35</option>
+            <option value="5">50</option>
+            <option value="6">100</option>
+            <option value="7">150</option>
+            <option value="8">250</option>
+            <option value="9">250+</option>
+          </select>
+        </div>
+        <div class="Table">
+          <div class="tab">
+            Monthly
+          </div>
+          <div class="tab" id="oneYear">
+            1yr
+            <div class="discount one">
+              <p>
+                10% off
+              </p>
+            </div>
+          </div>
+
+          <div class="tab" id="twoYears">
+            2yr
+            <div class="discount two">
+              <p>
+                15% off
+              </p>
+            </div>
+          </div>
+
+          <div class="tab active" id="threeYears">
+            3yr
+            <div class="discount three">
+              <p>
+                17.5% off
+              </p>
+            </div>
+          </div>
+
+          <div class="InfoBox">
+            <div class="price">
+              <h3 class="monthly">
+                $185/mo
+              </h3>
+              <p class="annual">
+                $2,228 total
+              </p>
+            </div>
+              <p class="guarantee">
+                No matter what size your team is, everyone gets the full power of all of Manuscript's features.
+              </p>
+          </div>
+        </div>
+        <div class="AddKilnCheckbox">
+          <input id="AddKiln" name="Add Kiln" type="checkbox" class="CheckboxInput__input"/>
+          <label for="Add Kiln">Add <a href="#kiln">Integrated Version Control with Kiln</a></label>
+        </div>
+        <form action="/try" method="post">
+        {{ forms.Button(label='Start your FREE 14-day trial',extraClasses='Button--submit') }} 
+        </form>
+      </div>
+      
+      <div class="OnPrem">
+        <div class="InfoBox">
+          <h2>
+            Contact us for pricing
+          </h2>
+          <div class="Email">
+            {{ forms.TextInput(color='purple', name='email', extraClass='mopEmail', placeholder='Work Email', type='email', value=email, required=true, pattern='^[\\w\\.\\-\\+]+@[\\w\\.\\-]+\\.[a-zA-Z]+$', title='Email must be in the form of "email@example.com"')}}
+            {{ forms.Button(label='Submit', type='submit', color='red', extraClasses='Button--submit emailSubmit')}}
+          </div>
+          <div class="Thanks">
+            <h3>
+              Thanks for the interest! We'll be in touch soon.
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+    <p>
+      If you're not satisfied, for any reason, within 90 days, you get a full refund, period, no questions asked.
+    </p>
+  </div>
+</section>
+
+<section class="Section PricingKiln">
+  <div class="PricingKiln__color-block"></div>
+  <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCode%20Img.svg?1519160648569"/>
+  <div class="Section__content"  id="kiln">
+    <div class="BigTextCallout BigTextCallout--wide BigTextCallout--right">
+      <h3 class="BigTextCallout__header">
+        Integrated Version Control <br/>with Kiln
+      </h3>
+      <h4 class="BigTextCallout__subheader">
+        The complete source control management system with tightly integrated code review  
+      </h4>
+      <ul>
+        <li>
+          Code Hosting
+        </li>
+        <li>
+          Version Control
+        </li>
+        <li>
+          Code Reviews
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Start of LiveChat (www.livechatinc.com) code -->
+   <script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6608381;
+    (function() {
+      var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+      lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+<!-- End of LiveChat code -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+<script src="pricing.js"></script>
+{% endblock content %}

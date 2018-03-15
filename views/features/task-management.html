@@ -1,0 +1,53 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--taskmanagement PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    1. Task Management
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Assign, prioritize and manage tasks from idea to done.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FColumn.svg?1509013725276" />
+    Task Management
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Track projects from start to finish. Divide them up into tasks and subtasks, then set their priority and assign them to different team members. Your whole team will know what they’re working on, and with due dates, everything gets delivered on time.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FFriends.svg?1509013554936" />    
+    Stay Productive with Fewer Meetings
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Each case provides the context you need to understand a task. From priority, due date, to task dependencies and who else is interested in the progress and outcome of a task.</p>
+    <p>Notifications keep you up to date with the latest progress, so you can drop the catchup meetings - as all the notes, questions, files, and progress are clear and in one place.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FPrivate.svg?1509014357252" />    
+    Built-in Accountability
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>By default, tasks are assigned to a single person - so you know where responsibility lies, and who is working on a task at any one time. When tasks are resolved, they go back to their creator for sign-off.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FTable.svg?1509014420321" />    
+    Task Management that Scales
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Organize tasks by project, area or team, and customize workflows to suit each of them. Powerful project management features keep everything on track. And flexible permissions means team members only see what they need to, and client data is secure.</p>
+  </div>  
+</div>
+{% endblock %}

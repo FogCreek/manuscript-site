@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle PageTitle--alternative PageTitle--feature PageTitle--titleimage PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      GitHub Issues Alternative
+    </h1>
+    <h2 class="PageTitle__subheader">
+      Manuscript: A GitHub Issues alternative for your whole team, not just developers
+    </h2>
+    <div>
+      <br /><br /><br /><br /><br />
+    </div>    
+    <div class="PageTitle__background"></div>
+  </div>
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          GitHub Issues customers switch to Manuscript because:
+        </h4>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          You can prioritize issues
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Prioritize issues and order them in a way that works for you, so you can keep projects organized and maximize your impact.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--blue">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          You can combine customer feedback and issues together
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Customer communication together with feature requests and bugs, means that your developers have all the context they need, without switching between multiple products.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--pink Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          There’s great support for Agile workflows
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            You can visually plan and manage your project backlog and iteration sprints.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          It scales with you
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript works well with large projects, many issues and across multiple teams.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          There are no barriers to collaboration
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Collaborate across your whole organization, and involve Design, Support, Marketing and other teams. Not just developers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block"></div>
+  <div class="Section__content">
+    <div class="GetStartedBottom__copy">
+      <h4 class="GetStartedBottom__header">
+          Learn how Manuscript works:
+      </h4>
+      <p class="GetStartedBottom__subheader">
+        The first 14 days are on us. No credit card required.
+      </p>
+    </div>
+    {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='aqua', buttonColor='blue') }}
+  </div>
+</section>
+
+{% endblock content %}

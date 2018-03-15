@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+{% block page_title %}{% endblock %}
+        {% block feature_top_container %}
+        <section class="Section FeatureTop">
+          <div class="Section__content">
+            {% block feature_top %}
+            {% endblock %}
+          </div>
+        </section>
+        {% endblock %}
+
+        <section class="Section FeatureMain">
+          <div class="FeatureMain__color-border--1"></div>
+          <div class="FeatureMain__color-border--2"></div>
+          <div class="FeatureMain__color-border--3"></div>
+          <div class="FeatureMain__color-block"></div>
+          <div class="Section__content">
+            {% block feature_main %}
+            {% endblock %}
+          </div>
+        </section>
+
+        <section class="Section GetStartedBottom">
+          <div class="GetStartedBottom__color-block"></div>
+          <div class="Section__content">
+            <div class="GetStartedBottom__copy">
+              <h4 class="GetStartedBottom__header">
+                  Learn how Manuscript works:
+              </h4>
+              <p class="GetStartedBottom__subheader">
+                The first 14 days are on us. No credit card required.
+              </p>
+            </div>
+            {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='pink', buttonColor='blue') }}
+          </div>
+        </section>
+{% endblock content %}

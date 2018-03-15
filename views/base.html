@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//cloud.typenetwork.com/projects/1924/fontface.css/" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225715-42"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-225715-42');
+    </script> 
+    <!-- KISSmetrics -->
+    <script type="text/javascript">var _kmq = _kmq || [];
+    var _kmk = _kmk || 'ecd9d211894fcedf7001af38b5f7d71de87a17f3';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
+    </script>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ffavicon.ico?1509986578860" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="/vendor/picturefill.min.js" async></script>
+    <!--CrazyEgg-->
+    <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0011/1669.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+  </head>
+  <body data-page="{{ pageSlug }}" data-short-page="{{ shortPage }}">
+    <div class="wrapper">
+      {% block SiteHeader %}
+      <header class="Section SiteHeader">
+        <div class="SiteHeader__color-block"></div>
+        <div class="SiteHeader__color-border--1"></div>
+        <div class="SiteHeader__color-border--2"></div>
+        <div class="SiteHeader__color-border--3"></div>
+        <div class="Section__content">
+          <nav class="SiteNav" data-menu-visible="false">
+            <div class="SiteNav__button">
+              <div class="SiteNav__button-hamburger"></div>
+              <div class="SiteNav__button-text">Menu</div>
+            </div>
+            <div class="SiteNav__content">
+              <a href="/" class="SiteNav__item SiteNav__item--SiteLogo SiteLogo">
+                <picture class="SiteLogo__picture">
+                  <source srcset="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo.svg?1508809305583" media="(min-width: 840px)" class="SiteLogo__source" />
+                  <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" class="SiteLogo__source" alt="Manuscript" />
+                </picture>
+              </a>
+              <div class="SiteNav__links">
+                <a class="SiteNav__item SiteNav__item--link" href="/how-it-works">How it works</a>
+                <a class="SiteNav__item SiteNav__item--link" href="/pricing">Pricing</a>
+                <a class="SiteNav__item SiteNav__item--link" href="/enterprise">Enterprise</a>
+                <a class="SiteNav__item Button Button--nav try try_fogbugz" href="/try">Try Manuscript</a>                
+                <a class="SiteNav__item SiteNav__item--link" href="/login">Log In</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      {% endblock SiteHeader %}
+
+      <main>
+        {% block content %}{% endblock %}
+
+        {% block SiteFooter %}
+        <footer class="Section Footer">
+          <div class="Footer__color-block"></div>
+          <div class="Footer__color-border--1"></div>
+          <div class="Footer__color-border--2"></div>
+          <div class="Footer__color-border--3"></div>
+          <div class="Section__content">
+            <div class="Footer__items">
+              <div class="SiteLogo">
+                <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo.svg?1508809305583" alt="Manuscript" class="SiteLogo__image" />
+              </div>
+              {% include "components/SocialIcons.html" %}
+
+              <div class="FooterCopy FooterCopy--Links">
+                <br />
+                <a href="/" class="FooterCopy__item FooterCopy__item--header">
+                  Manuscript
+                </a>
+                <a href="https://help.fogcreek.com" class="FooterCopy__item">Support</a>
+                <a href="/features/task-management" class="FooterCopy__item">Feature Tour</a>
+                <a href="/integrations" class="FooterCopy__item">Integrations</a>                   
+                <a href="/pricing" class="FooterCopy__item">Pricing</a>
+                <a href="/enterprise" class="FooterCopy__item">Enterprise</a>
+                <a href="/eula" class="FooterCopy__item">EULA</a>
+                <a href="http://status.fogcreek.com" class="FooterCopy__item">System Status</a>
+                <a href="https://api.manuscript.com" class="FooterCopy__item">API</a>                
+              </div>
+              <div class="FooterCopy FooterCopy--Contact">
+                <a href="http://www.fogcreek.com/contact/" target="_blank" class="FooterCopy__item FooterCopy__item--header">
+                  Contact Manuscript
+                </a>
+                <a href="mailto:customer-service@fogcreek.com" class="FooterCopy__item">customer-service@fogcreek.com</a>
+                <p class="FooterCopy__item">Phone North America: 1-866-364-2733</p>
+                <p class="FooterCopy__item">Phone Outside North America: +1 (212) 279-2335</p>
+                <p class="FooterCopy__item">75 Broad Street, Suite 1904, New York City, NY 10004</p>
+                <p class="FooterCopy__item">&copy; 2000-2018 Fog Creek Software</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        {% endblock %}
+      </main>
+    </div>
+
+
+  
+    <script src="/client.js"></script>
+    {% block page_scripts %}{% endblock %}
+  </body>
+</html>

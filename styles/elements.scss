@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-size;
+  overflow-x: hidden;
+}
+
+body {
+  background: $white;
+  font-family: "Benton Sans Bk", helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+strong {
+  &.really-strong {
+    font-family: "Benton Sans Bd";
+  }
+}
+
+main {
+  overflow: hidden;
+}

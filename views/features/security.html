@@ -1,0 +1,66 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--security PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    11. Security Features
+    </h1>
+    <h2 class="PageTitle__subheader">
+    To reassure, and protect your data.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FPrivate.svg?1509014357252" />
+    Two-Factor Authentication (2FA)
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Go beyond password security and enable 2-Factor Authentication to keep all work data secure.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FLock.svg?1509454406915" />    
+    Session Management
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Complete access controls with the ability to delete individual tokens, all tokens for a user, as well as a complete reset option.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FDelete.svg?1509454406915" />    
+    True Delete
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>For peace of mind, Admins have the ability to permanently delete any sensitive data in your Manuscript instance.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FGlobe.svg?1509454404885" />    
+    In the Cloud or On Premises
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>From redundant firewalls to strict access controls, we have security measures in place to protect the security of your data hosted in the Cloud. You also have the option to host Manuscript on your own servers.</p>
+  </div>  
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FShield.svg?1509454406915" />    
+    Single Sign-On (SSO)
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>If you’re already managing the rest of your authentication through a SAML 2.0 provider, you can use your identity provider for Manuscript login.</p>
+  </div>  
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FDownload.svg?1509454404453" />    
+    Google OAuth
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Manuscript accounts can enable Google OAuth to make login and sign-up quick, secure and easy for users with Google accounts.</p>
+  </div>    
+</div>
+{% endblock %}

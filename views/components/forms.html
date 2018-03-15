@@ -1,0 +1,114 @@
+{% macro TextInput(
+  value='', 
+  placeholder='',
+  type='text',
+  color='yellow',
+  name='',
+  extraClass='',
+  pattern='',
+  required=false,
+  title=''
+) %}
+<input name="{{ name }}" type="{{ type }}" class="TextInput TextInput--{{ color }} {{ extraClass }}" placeholder="{{ placeholder }}" value="{{ value }}" {% if required %}required{% endif %} pattern="{{pattern}}" title="{{title}}"/>
+{% endmacro %}
+
+{% macro TextInputLarge(
+  value='', 
+  placeholder='',
+  type='text',
+  name='',
+  extraClass=''
+) %}
+{{ TextInput(value=value, placeholder=placeholder, name=name, extraClass='TextInput--large', color='aqua') }}
+{% endmacro %}
+
+{% macro FileInput(
+  name='',
+  extraClass=''
+) %}
+<input name="{{ name }}" type="file" class="FileInput {{ extraClass }}" />
+{% endmacro %}
+
+{% macro Textarea(
+  value='', 
+  placeholder='',
+  color='yellow',
+  name='',
+  extraClass=''
+) %}
+<textarea name="{{ name }}" class="Textarea Textarea--{{ color }} {{ extraClass}}" placeholder="{{ placeholder }}" value="{{ value }}"></textarea>
+{% endmacro %}
+
+{% macro TextareaLarge(
+  value='', 
+  placeholder='',
+  name='',
+  extraClass=''
+) %}
+{{ Textarea(value=value, placeholder=placeholder, name=name, extraClass='Textarea--large', color='aqua') }}
+{% endmacro %}
+
+{% macro CheckboxInput(
+  checked=false, 
+  name='',
+  label='',
+  extraClass='',
+  required=false
+) %}
+<div class="CheckboxInput">
+  <input id="{{ name }}" name="{{ name }}" type="checkbox" class="CheckboxInput__input {{ extraClass }}" {% if checked %}checked{% endif %} {% if required %}required{% endif %}/>
+  <label for="{{ name }}" class="CheckboxInput__label">{{ label | safe }}</label>
+</div>
+{% endmacro %}
+
+{% macro URLInput(
+  value='',
+  placeholder='',
+  type='text',
+  prefix='https://',
+  name='',
+  postfix='.manuscript.com',
+  extraClass='',
+  required=false,
+  pattern='',
+  title=''
+) %}
+<div class="URLInputGroup">
+  <div class="URLInputGroup__prefix">
+    {{prefix}}
+  </div>
+  <input name="{{ name }}" type="{{ type }}" class="URLInputGroup__input TextInput TextInput--gray {{ extraClass }}" placeholder="{{ placeholder }}" value="{{ value }}" {% if required %}required{% endif %} pattern="{{pattern}}" title="{{title}}"/>
+  <div class="URLInputGroup__postfix">
+    {{postfix}}
+  </div>
+</div>
+{% endmacro %}
+
+{% macro Button(
+  label='', 
+  type='',
+  color='red',
+  extraClasses=''
+) %}
+<button type="{{ type }}" class="Button Button--{{ color }} {{ extraClasses }} try try_fogbugz">
+  {{ label }}
+</button>
+{% endmacro %}
+
+{% macro GetStartedForm(
+  value='', 
+  buttonLabel='Get Started', 
+  location='top', 
+  showPrivacy=false,
+  inputColor='yellow',
+  buttonColor='red'
+) %}
+  <form action="/try" method="post" class="GetStartedForm GetStartedForm--{{ location }}">
+    {{ TextInput(name='email', placeholder='Your email', type='email', extraClass='GetStartedForm__input', color=inputColor, required=true, pattern='^[\\w\\.\\-\\+]+@[\\w\\.\\-]+\\.[a-zA-Z]+$', title='Email must be in the form of "email@example.com"')}}
+    {%- if showPrivacy -%}
+    <a href="/privacy" class="GetStartedForm__privacy-link">Privacy Policy</a>
+    {%- endif -%}
+    {{ Button(label=buttonLabel, type='submit', extraClasses='GetStartedForm__submit Button--submit', color=buttonColor)}}
+  </form>
+{% endmacro %}
+

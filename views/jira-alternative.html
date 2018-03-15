@@ -1,0 +1,349 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle PageTitle--alternative PageTitle--feature PageTitle--titleimage PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      JIRA Alternative
+    </h1>
+    <h2 class="PageTitle__subheader">
+      Manuscript: a simple to use, easily configured alternative to JIRA
+    </h2> 
+    <div>
+      <br /><br /><br /><br /><br />
+    </div>     
+    <div class="PageTitle__background"></div>
+  </div>
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Atlassian JIRA customers switch to Manuscript because:
+        </h4>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Search that actually works
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript offers the best search on the market so you can always find the data you need. Jira requires you to memorize their search syntax, complicating the simple task of finding items you’ve worked on or reporting back to management. With discoverable, full-text search across all fields, Manuscript does the digging for you.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--blue">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Connect all your tools in one place without paying extra
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            We believe you should be able to connect all of your tools in one place, without hidden costs. Jira’s app marketplace puts the weight of evaluating third party integrations on your team, often listing up to 10 separate offerings for the same tool, each with a separate cost. Manuscript offers first party integrations with the tools you love, and creates an easy environment to build custom integrations, with no surprise price tags.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--pink Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Everything you need is in one place
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript works out of the box, with built-in functionality around agile development, task management, and email integration. With Jira, you need four separate products to get all of the functionality available natively in Manuscript, adding significant overhead and cost for your team.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Maintaining software shouldn’t be harder than your job
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript was built to stay out of your way, while Jira’s heavy customizability leaves the burden of administering their software to your team. Manuscript’s default workflows help you get started immediately, and our flexible customizations make it easy for your team to build and maintain new projects, allowing you to focus on the work at hand.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Workflows are simple, but flexible
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Forget buying the guidebook or hiring in that consultancy team or full-time administrator, our workflows are intuitive and easily configured to suit your needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block" id="comparison-chart"></div>
+  <div class="Section__content">
+
+    <div style="width: 100%; margin-top: 5em; margin-bottom: 7.5em;">
+      <h4 class="Subsection__header">
+        Easier to Get Started
+      </h4>
+      <div class="Subsection__body">
+        <p>
+          Manuscript gives you all the tools you need, in one product. No add-ons required.
+        </p>        
+      </div>
+      <table class="pricing-table table table-bordered table-hover table-condensed mobileTable" style="margin: 0 auto;">
+        <tbody><tr>
+        <td class="header"> </td>
+        <td class="header"><h3>Manuscript</h3></td>
+        <td class="header comparison-price"><h3>Jira</h3></td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Issue Tracking</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Core ($5/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Notifications</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Core</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Search</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Core</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Kanban</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Software ($7/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Agile Workflow</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Software</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Customer submitted issues</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Service Desk ($20/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Knowledge Base</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Service Desk</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">AI-based inbox sorting</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price"></td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Free customizable integrations</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price"> </td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Direct human support</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Costs a lot extra</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Slack Integration</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">3rd party ($1 extra/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">GitHub Integration</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">3rd party ($2 extra/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Google Drive Integration</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price"></td>
+        </tr>          
+        <tr>
+        <td class="header comparison-label">Price per user per month</td>
+        <td>$10</td>
+        <td class="comparison-price">$10-$30/user</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label"><h3>For 20 users:</h3></td>
+        <td class="header"><h3>$200</h3></td>
+        <td class="header comparison-price"><h3>$200-$600</h3></td> 
+        </tr>
+        </tbody>
+      </table> 
+      <table class="pricing-table table table-bordered table-hover table-condensed notMobileTable" style="margin: 0 auto;">
+        <tbody><tr>
+        <th class="header none"> </th>
+        <th class="header bheader"><h3>Manuscript</h3></th>
+        <th class="header comparison-price"><h3>Jira<br />Core</h3></th>
+        <th class="header comparison-price"><h3>Jira<br />Software</h3></th> 
+        <th class="header comparison-price"><h3>Jira<br />Service Desk</h3></th> 
+        <th class="header comparison-price"><h3>3rd Party<br />Jira Add-on</h3></th>          
+        </tr>
+        <tr>
+        <td class="header comparison-label">Issue Tracking</td>
+        <td>X</td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>          
+        </tr>
+        <tr>
+        <td class="header comparison-label">Notifications</td>
+        <td>X</td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Search</td>
+        <td>X</td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Kanban</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Agile Workflow</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Customer Submitted Issues</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Knowledge Base</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">AI-based Inbox Sorting</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Free Customizable Integrations</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Direct Human Support</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Slack Integration</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">GitHub Integration</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td> 
+        </tr>
+        <tr>
+        <td class="header comparison-label">Google Drive Integration</td>
+        <td>X</td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price"></td>
+        <td class="comparison-price">X</td> 
+        </tr>          
+        <tr>
+        <td class="header comparison-label bold">Price per user/month</td>
+        <td class="bold">$10</td>
+        <td class="bottom comparison-price bold">$5</td>
+        <td class="bottom comparison-price bold">+ $7</td>  
+        <td class="bottom comparison-price bold">+ $20</td>
+        <td class="bottom comparison-price bold">+ $7-?</td>          
+        </tr>
+        </tbody>
+      </table>       
+    </div>     
+    
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block"></div>
+  <div class="Section__content">
+    <div class="GetStartedBottom__copy">
+      <h4 class="GetStartedBottom__header">
+          Learn how Manuscript works:
+      </h4>
+      <p class="GetStartedBottom__subheader">
+        The first 14 days are on us. No credit card required.
+      </p>
+    </div>
+    {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='aqua', buttonColor='blue') }}
+  </div>
+</section>
+
+{% endblock content %}

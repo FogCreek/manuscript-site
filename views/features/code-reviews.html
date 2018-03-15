@@ -1,0 +1,55 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--codereviews PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    10. Code Reviews
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Flexible code reviews to discuss changes & share knowledge.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    Available in the Kiln add-on:
+  </h4>  
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FBinoculars.svg?1509044078141" />
+    Code Reviews
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Code reviews integrated with issue tracking means you have the background info needed for accurate code reviews without context switching - It’s easy to track the feature requests or bug reports related to a commit.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FGlasses.svg?1509044121421" />    
+    See Just What You Need To
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Don’t get overwhelmed - see just your reviews or filter by the reviewer, author, and repository from the Reviews dashboard.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FChat.svg?1509044354184" />    
+    Flexible Commenting
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Highlight specific lines to comment on or add comments about the whole changeset. Our flexible commenting helps your team focus on the key code changes needing attention.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FRepeat.svg?1509044391639" />    
+    Review Iteratively
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Approve, reject or set to needs work. Three simple review statuses ensure clear outcomes and fit with your existing workflow.</p>
+  </div>  
+</div>
+{% endblock %}

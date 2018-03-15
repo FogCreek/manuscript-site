@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle PageTitle--enterprise PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      From FYS to On Premises
+    </h1>
+    <h2 class="PageTitle__subheader">
+      Here's what you're missing out on!
+    </h2>
+    <div class="PageTitle__background"></div>
+  </div>
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fdude.svg?1509502033093" class="Subsection__header-icon" alt="A mountain" />New Look and Feel
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Re-designed with speed and ease of use in mind. Manuscript is faster, with a simplified user experience that brings the most commonly used functionality to the fore.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-share.svg?1509502033104" class="Subsection__header-icon" alt="Share knowledge" />In-App Notifications and Activity Feed
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Keep up-to-date with what’s going on with your cases and wiki pages without ever having to leave Manuscript. The notifications page and activity feed provide all the case status updates you need, without having to switch between email and Manuscript.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--pink">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-email.svg?1509305214993" class="Subsection__header-icon" alt="Fight email" />Digest Emails
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Stay informed but receive fewer emails. Enable periodic emails that cover all of the activity that’s happened in Manuscript, so you can stay on top of things. 
+          </p>        
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-slap.svg?1509502033104" class="Subsection__header-icon" alt="Two people, high-fiving" />Essential Info Where You Need It
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            See who is working on a specific case, who is involved in a group of cases, and notify users about case changes by subscribing them to case updates.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img class="Subsection__header-icon" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FGlasses.svg?1509044121421" style="-webkit-filter: invert(100%);" />Search Guide with Auto-complete
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            A faster way to find the information you need. Slice and dice your Manuscript cases by building searches to find specific sets of cases.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img class="Subsection__header-icon" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FColumn.svg?1509013725276" style="-webkit-filter: invert(100%);" />Iteration Planner
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Iteration Planner unlocks the power of Manuscript as an Agile planning tool for software development.
+          </p>
+          <p>Graphically group cases in sprints, distribute tasks among your team with drag-and-drop and see how much work has been done toward each of your goals.
+          </p>        
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-hero.svg?1509502033104" class="Subsection__header-icon" alt="Someone flying with a cape" />Smart Integrations
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript has intelligent connections to the collaboration tools you use, like Slack, Twitter and Google Docs. Plus, they’re all powered by Glitch for ease of customization. So you can make them do exactly what you need.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--aqua">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img class="Subsection__header-icon" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FLock.svg?1509454406915" style="-webkit-filter: invert(100%);" />Enhanced Security
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Session Management, Single Sign-On with SAML, and True Delete make sure you’re in control of who has access to Manuscript and that any sensitive data isn’t accidentally left in cases.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-social.svg?1509305215050" class="Subsection__header-icon" alt="A bug" />Project Groups
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Group projects so you can get the information you need in a flash and rapidly make search queries to find the exact cases you need.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--pink">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-heart.svg?1509502033104" class="Subsection__header-icon" alt="A heart" />And Lots More!
+        </h4>
+        <div class="Subsection__body">
+          <ul>
+            <li>Start Work Button - for easier time tracking</li>
+            <li>Merge Cases - Elegantly merge duplicate cases</li>
+            <li>Postpone Cases - Close cases and have them reactivate when you need them</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block"></div>
+  <div class="Section__content">
+    <div class="GetStartedBottom__copy">
+      <h4 class="GetStartedBottom__header">
+          Learn how Manuscript works:
+      </h4>
+      <p class="GetStartedBottom__subheader">
+        The first 14 days are on us. No credit card required.
+      </p>
+    </div>
+    {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='aqua', buttonColor='blue') }}
+  </div>
+</section>
+
+ <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6608381;
+    (function() {
+      var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+      lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+<!-- End of LiveChat code -->
+{% endblock content %}

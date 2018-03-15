@@ -1,0 +1,1611 @@
+.Introduction {
+  @include Section(center);
+  z-index: map-get($section-z-index, Introduction);
+
+  .SiteLogo {
+    margin-bottom: 1rem;
+  }
+
+  .Section__content {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    max-width: $column-width * 4;
+
+    @media (min-width: $bp-medium) {
+
+    }
+
+    @media (min-width: $bp-large) {
+      max-width: $column-width * 6;
+    }
+  }
+
+  &__tagline {
+    @include type-header-primary-xlarge;
+    width: 100%;
+    margin: 0 0 .5em;
+  }
+
+  &__check {
+    height: 1em;
+    display: inline-block;
+    position: relative;
+    top: .1em
+  }
+
+  &__graphic {
+    display: none;
+
+    @media (min-width: $column-width * 7) {
+      max-width: $column-width * 3;
+      position: relative;
+      top: .5em;
+      font-size: 10em;
+      min-height: 2.25em;
+      flex: 1 1 auto;
+      display: block;
+    }
+
+    @media (min-width: $column-width * 8) {
+      max-width: $column-width * 3;
+      font-size: 12em;
+    }
+
+    @media (min-width: $bp-large) {
+      max-width: $column-width * 4;
+      flex: 1 1 auto;
+      font-size: 17em;
+    }
+  }
+
+  &__image {
+    height: 1em;
+    width: 1em;
+    border: 1px solid $black;
+    border-radius: 4px;
+    position: absolute;
+
+    &--sprint {
+      top: 0;
+      right: 0.03em;
+      border-color: $purple;
+      box-shadow: 6px 6px 0 $gray-light;
+      z-index: 3;
+    }
+    &--chart {
+      top: .3em;
+      right: .7em;
+      border-color: $yellow;
+      box-shadow: 3px 3px 0 $gray-light;
+      z-index: 1;
+    }
+    &--cases {
+      top: 1.2em;
+      right: .4em;
+      border-color: $blue;
+      box-shadow: 12px 12px 0 $gray-light;
+      z-index: 2;
+    }
+  }
+
+  &__signup {
+    width: 100%;
+    max-width: $column-width * 4;
+
+    @media (min-width: $bp-medium) {
+      max-width: $column-width * 5;
+    }
+  }
+  
+  &__login {
+    width: 100%;
+    max-width: $column-width * 4;
+
+    @media (min-width: $bp-medium) {
+      max-width: $column-width * 5;
+    }
+  }
+}
+
+.SoftwareThatMatters {
+  @include Section(left, $fixed-margin: $grid-gutter);
+  z-index: map-get($section-z-index, SoftwareThatMatters);
+  margin-top: 8em;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  color: $white;
+
+  @include color-background(
+    SoftwareThatMatters,
+    30deg,
+    0,
+    auto,
+    40.75em,
+    100%,
+    $aqua,
+    ($aqua, $red, $yellow)
+  )
+}
+
+
+.UpfrontPricing {
+  $z-index-interior: 0;
+
+  @include Section($anchor: left, $content-position: relative, $fixed-margin: $column-width);
+  z-index: map-get($section-z-index, UpfrontPricing);
+  padding: 5em 0 20em;
+  color: $black;
+  
+  @media (min-width: $bp-medium) {
+    padding: 10em 0 20em;
+  }
+
+  .Section__content {
+    z-index: map-get($section-z-index, UpfrontPricing__content);
+  }
+
+  @include color-background(
+    UpfrontPricing,
+    30deg,
+    0,
+    auto,
+    -22em,
+    300%,
+    $yellow,
+    ()
+  )
+
+  &__arm-1 {
+    position: absolute;
+    top: 3em;
+    height: 26em;
+    left: 18em;
+
+    @media (min-width: $bp-small) {
+      top: 3em;
+      height: 26em;
+      left: auto;
+      right: -2em;
+    }
+
+    @media (min-width: $bp-medium) {
+      top: 2em;
+      height: 30em;
+      left: 30em;
+    }
+
+    @media (min-width: $bp-large) {
+      top: 0em;
+      height: 36em;
+      left: 35em;
+    }
+  }
+
+  &__arm-2 {
+    position: absolute;
+    top: -17em;
+    height: 25em;
+    left: -2em;
+    transform: rotate(90deg);
+
+    @media (min-width: $bp-small) {
+      top: -20em;
+      height: 30em;
+    }
+
+    @media (min-width: $bp-medium) {
+      height: 40em;
+      top: -26em;
+      left: -5em;
+    }
+
+    @media (min-width: $bp-large) {
+      position: absolute;
+      top: -8em;
+      height: 55em;
+      left: -8.5em;
+      transform: rotate(0deg);
+    }
+
+    @media (min-width: $bp-large + 10) {
+      left: -11em;
+      top: -1em;
+    }
+  }
+
+  &__arm-3 {
+    position: absolute;
+    top: 21em;
+    height: 10em;
+    left: 0em;
+    transform: rotate(245deg);
+
+    @media (min-width: $bp-small * 1.25) {
+      top: 18em;
+      height: 12em;
+      left: 8em;
+    }
+
+    @media (min-width: $bp-large) {
+      top: -20em;
+      height: 14em;
+      left: -18em;
+      transform: rotate(0deg);
+
+    }
+  }
+}
+
+.GreatSoftware {
+  @include Section($anchor: right, $content-position: static);
+  z-index: map-get($section-z-index, GreatSoftware);
+  top: -20em;
+  color: $white;
+  padding: 10em 0 0;
+
+  @media (min-width: $bp-medium) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: 15em 0 0;
+  }
+
+  .Section__content {
+    // We want this to be on top of the quote popouts
+    z-index: 1;
+    @media (min-width: $bp-large) {
+      padding-bottom: 5em;
+    }
+
+    @media (min-width: $bp-max) {
+      padding-bottom: 20em;
+    }
+  }
+
+  .QuotePopouts {
+    z-index: 0;
+  }
+
+  @include color-background(
+    GreatSoftware,
+    -30deg,
+    0,
+    auto,
+    -31.25em,
+    120%,
+    $blue,
+    ($blue, $pink, $green)
+  )
+}
+
+.HowItWorks {
+  @include Section($anchor: right, $content-position: static);
+  z-index: map-get($section-z-index, HowItWorks);
+  top: -14em;
+  color: $white;
+  padding: 5em 0 5em;
+
+  @media (min-width: $bp-small) {
+    top: -10em;
+    padding: 5em 0 10em;
+
+  }
+  @media (min-width: $bp-medium) {
+    padding: 0;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: 5em 0;
+  }
+
+  @media (min-width: $bp-max) {
+    padding: 5em 0 0;
+  }
+
+  @include color-background(
+    HowItWorks,
+    -30deg,
+    0,
+    auto,
+    -41.5em,
+    150%,
+    $purple,
+    ()
+  )
+
+  &__background-shape {
+    position: absolute;
+    top: 40%;
+    width: 100vw;
+    height: 100em;
+    background: $purple;
+    z-index: -1;
+  }
+
+  &__video {
+    position: relative;
+    padding-top: 56.25%;
+  }
+
+  &__embed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $bp-medium) {
+      width: 75%;
+      height: 75%;
+    }
+  }
+}
+
+.MadeBy {
+  @include Section(center, absolute);
+  z-index: map-get($section-z-index, MadeBy);
+  color: $white;
+  padding: 2em 0 0;
+  min-height: 16em;
+
+  @media (min-width: $bp-xsmall) {
+    min-height: 15em;
+  }
+
+  @media (min-width: $bp-small) {
+    min-height: 14em;
+  }
+
+  @media (min-width: $bp-medium) {
+    min-height: 16em;
+  }
+
+  @media (min-width: $bp-medium + 6) {
+    min-height: 13em;
+  }
+
+  @media (min-width: $bp-large + 8) {
+    min-height: 10em;
+  }
+
+  @include color-background(
+    MadeBy,
+    30deg,
+    0,
+    auto,
+    25.75em,
+    200%,
+    $red,
+    ($red, $pink, $purple)
+  )
+
+  .Section__content {
+    width: 100%;
+    top: -11em;
+    left: 0;
+    max-width: none;
+
+    @media (min-width: $bp-small) {
+      top: -50%;
+    }
+
+    @media (min-width: $bp-medium) {
+      top: -35%;
+    }
+
+    @media (min-width: $bp-medium + 6) {
+      top: -20%;
+    }
+
+    @media (min-width: $bp-large) {
+      width: 200em;
+      top: -10em;
+      left: -64em;
+    }
+
+    @media (min-width: $bp-large + 8) {
+      top: -6em;
+      left: -55em;
+    }
+
+    @media (min-width: $bp-xlarge) {
+      top: -10em;
+    }
+  }
+
+  &__header {
+    transform: rotate(15deg);
+    @include type-header-secondary-long;
+    max-width: $column-width * 7.5;
+    text-align: center;
+    margin: 2em 0 1em;
+
+    @media (min-width: $bp-small) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $bp-medium * .8) {
+      margin: 1em 0 1em;
+    }
+
+    @media (min-width: $bp-large) {
+      margin: 2em 0 1em;
+      max-width: $column-width * 9;
+      transform: rotate(30deg);
+    }
+  }
+
+  &__logos {
+    transform: rotate(15deg);
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    @media (min-width: $bp-large) {
+      transform: rotate(30deg);
+    }
+  }
+
+  &__logo {
+    height: 1.25em;
+    width: auto;
+    margin: .5em 1em;
+
+    @media (min-width: $bp-medium) {
+      height: 2em;
+      margin: 1em;
+    }
+
+    &--apple {
+      height: 2em;
+
+      @media (min-width: $bp-large) {
+        height: 2.666666em;
+      }
+    }
+  }
+}
+
+.GetStartedBottom {
+  @include Section(center);
+  z-index: map-get($section-z-index, GetStartedBottom);
+  margin-top:0;
+  padding: 2em 0;
+  color: $black;
+
+  @media (min-width: $bp-small) {
+    padding: 5em 0 1em;
+  }
+
+  @media (min-width: $bp-medium) {
+    padding: 7em 0 1em;
+  }
+
+  @media (min-width: $bp-medium + 10) {
+    padding: 10em 0 0;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: calc(28.87vw - 11em) 0 0;
+  }
+
+  @media (min-width: $bp-xlarge) {
+    padding: calc(28.87vw - 17em) 0 0;
+  }
+
+  @media (min-width: $bp-max) {
+    padding: 18em 0 0;
+  }
+
+  .Section__content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-width: $column-width * 4;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    @media (min-width: $bp-medium) {
+      max-width: 90vw;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: $column-width * 7.5;
+    }    
+  }
+
+  @include color-background(
+    GetStartedBottom,
+    30deg,
+    0,
+    auto,
+    33.75em,
+    200%,
+    $white,
+    ()
+  )
+    
+  &__color-block {
+    .GetStartedBottom--enterprise & {
+      $top: 40em;
+      top: ($top / 2);
+      
+      @media (min-width: $bp-large) {
+        top: $top;
+      }
+      
+      @media (min-width: $bp-xlarge) {
+        top: $top * .85;
+      }
+
+    }   
+  }
+
+  &__copy {
+    @media (min-width: $bp-medium) {
+      flex: 0 0 auto;
+      margin-right: 1em;
+
+    }
+  }
+
+  &__header {
+    @include type-header-secondary;
+    margin: 0 0 .25em;
+  }
+
+  &__subheader {
+    @include type-body;
+    margin: 0 0 .5em;
+  }
+}
+
+.Footer {
+  @include Section($anchor: left, $fixed-margin: $grid-gutter);
+  z-index: map-get($section-z-index, Footer);
+  margin-top: 9.5em;
+  padding: 5em 0 2em;
+  color: $white;
+
+  @media (min-width: $bp-small + 5) {
+    padding: 7em 0 25em;
+    margin-top: 5em;
+    
+    [data-short-page=true] & {
+      padding-bottom: 0;
+      position: fixed;
+      bottom: 0;
+    }
+
+  }
+
+  &__items {
+    max-width: $column-width * 5;
+  }
+
+  @include color-background(
+    Footer,
+    30deg,
+    0,
+    auto,
+    47.75em,
+    80em,
+    $yellow,
+    ($yellow, $red, $aqua)
+  )
+
+  .SiteLogo {
+    margin-bottom: .5em;
+    max-width: 100%;
+    
+    .SiteLogo__image {
+      max-width: 100%;
+    }
+  }
+
+  .SocialIcons {
+    width: $column-width * 2.75;
+    margin-bottom: 1em;
+
+    @media (min-width: $bp-small + 5) {
+      float: left;
+    }
+  }
+
+  .FooterCopy--Links {
+    width: $column-width;
+    margin-bottom: 3em;
+
+    @media (min-width: $bp-small + 5) {
+      float: right;
+    }
+  }
+
+  .FooterCopy--Contact {
+    @media (min-width: $bp-small + 5) {
+      float: left;
+    }
+  }
+
+}
+
+.PricingBreakdown {
+  @include Section(left, $fixed-margin: $grid-gutter);
+  z-index: map-get($section-z-index, PricingBreakdown);
+  margin-top: 9em;
+  padding-top: 6em;
+  color: $white;
+
+  @include color-background(
+    PricingBreakdown,
+    30deg,
+    0,
+    auto,
+    40.75em,
+    280%,
+    $green,
+    ($aqua, $purple, $yellow)
+  )
+  
+  .PricingChart {
+    max-width: 50em;
+    * {
+      color: $black;
+      border-radius: $border-radius;
+      margin: 0.5em 0;
+      padding: 0.5em 0;
+      font-family: "Benton Sans Bk";
+    }
+    .Button {
+      font-size: 1.2em;
+      height: 3em;
+    }
+    .ProductToggle {
+      width: 25%;
+      border-color: $white;
+      background-color: $green;
+      &.checked {
+        border-color: $yellow;
+        background-color: $yellow;
+      }
+      &:hover {
+       background-color: $white; 
+      }
+    }
+    .UserDropdown {
+      width: 50%;
+      border-color: $yellow;
+      background-color: $yellow;
+      display: flex;
+      background: $yellow url("https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fcaret.png?1519319767471") no-repeat scroll 95% center;
+      p {
+        flex-basis: 50%;
+        padding: 0 1em;
+        line-height: 20px;
+      }
+      select {
+        background: transparent;
+        border: none;
+        padding: 0;
+        line-height: 20px;
+        flex-basis: 50%;
+        font-size: 1.2em;
+        -webkit-appearance: none;
+        text-align-last: center;
+        &:focus {
+         outline: none; 
+        }
+      }
+    }
+    .Table {
+      margin: 2em 0;
+    }
+    .tab {
+      display: inline-block;
+      background-color: $white;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 0.5em;
+      margin: 0.5em 0.25em 0 0;
+      width: 16%;
+      min-width: 70px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      &.active {
+        background-color: $yellow;
+      }
+    }
+    .discount {
+      display: inline-block;
+      position: absolute;
+      top: -15px;
+      right: -6px;
+      height: 3em;
+      width: 3em;
+      font-size: 0.8em;
+      background-color: $red;
+      &.one{
+        border-top-left-radius: (random(20)+35) + %; //35-55% seem to be a good level of roundness
+        border-top-right-radius: (random(20)+35) + %;
+        border-bottom-left-radius: (random(20)+35) + %;
+        border-bottom-right-radius: (random(20)+35) + %;
+      }
+      &.two {
+        border-top-left-radius: (random(20)+35) + %;
+        border-top-right-radius: (random(20)+35) + %;
+        border-bottom-left-radius: (random(20)+35) + %;
+        border-bottom-right-radius: (random(20)+35) + %;
+      }
+      &.three {
+        border-top-left-radius: (random(20)+35) + %;
+        border-top-right-radius: (random(20)+35) + %;
+        border-bottom-left-radius: (random(20)+35) + %;
+        border-bottom-right-radius: (random(20)+35) + %;
+      }
+      margin: 0;
+      p {
+        color: $white;
+        position: absolute;
+        top: -5px;
+        transform: rotate(12deg);
+      }
+    }
+    
+    .InfoBox {
+      border-color: $yellow;
+      background-color: $yellow;
+      border-top-left-radius: 0;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      
+      .price, .guarantee {
+        padding: 1em;
+        flex-basis: 50%;
+      }
+      .monthly {
+        font-size: 3em;
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .annual {
+        font-size: 1em;
+        color: $gray-dark;
+        text-align: center;
+      }
+      .guarantee {
+        font-size: 1em;
+      }
+    }
+    .Button--submit {
+      width: 50%;
+      color: $white;
+      border-color: $white;
+      &:hover {
+        color: $red;
+        background-color: $white;
+      }
+    }
+    .OnPrem {
+      display: none;
+      .InfoBox {
+        display: block;
+        padding: 2em;
+        .Email {
+          display: flex;
+          justify-content: space-between;
+          input {
+            flex-basis: 74%;
+            padding: 1em;
+          }
+          button {
+            flex-basis: 24%; 
+          }
+        }
+        .Thanks {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.PricingKiln {
+  @include Section($anchor: right, $content-position: static);
+  z-index: map-get($section-z-index, PricingKiln);
+  top: 20em;
+  color: $white;
+  padding: 10em 0 12em;
+
+  @media (min-width: $bp-medium) {
+    padding-bottom: 8em;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: 0;
+  }
+  
+  img {
+    padding-bottom: 3em;
+  }
+
+  .Section__content {
+    z-index: 1;
+    h4 {
+      max-width: 20em;
+      padding: 1em 0;
+    }
+    ul {
+      font-size: 1.6em;
+    }
+    @media (min-width: $bp-large) {
+      padding-bottom: 5em;
+    }
+
+    @media (min-width: $bp-max) {
+      padding-bottom: 20em;
+    }
+  }
+
+  @include color-background(
+    PricingKiln,
+    -30deg,
+    0,
+    auto,
+    -31.25em,
+    240%,
+    $purple
+  )
+}
+
+.PageTitle {
+  padding: 3em 0 0;
+  @include Section($anchor: left, $content-position: relative);
+  z-index: map-get($section-z-index, PageTitle);
+  color: $black;
+  
+  &--title-only {
+    padding-bottom: 5em;
+
+    @media (min-width: $bp-large) {
+      padding-bottom: 10em;
+    }
+  }
+  
+  &--has-background {
+    z-index: map-get($section-z-index, PageTitle) - 2;
+    padding-bottom: 18em;
+
+    &.PageTitle--feature {
+      padding-bottom: 5em;
+    }
+    
+    @media (min-width: $bp-xsmall) {
+      padding-bottom: 80vw;
+
+      &.PageTitle--feature {
+        padding-bottom: 5em;
+      }
+    }
+
+    @media (min-width: $bp-small) {
+      padding-bottom: 60vw;
+
+      &.PageTitle--pricing {
+        padding-bottom: 50vw;
+      }
+
+      
+      &.PageTitle--feature {
+        padding-bottom: 20vw;
+      }
+    }
+
+    @media (min-width: $bp-medium) {
+      padding-bottom: 40vw;
+
+      &.PageTitle--pricing {
+        padding-bottom: 30vw;
+      }
+    }
+
+    @media (min-width: $bp-large) {
+      padding-bottom: 40vw;
+
+      &.PageTitle--pricing {
+        padding-bottom: 25vw;
+      }
+    }
+
+    @media (min-width: $bp-xlarge) {
+      padding-bottom: 30em;
+
+      &.PageTitle--pricing {
+        padding-bottom: 18em;
+      }
+      
+      &.PageTitle--feature {
+        padding-bottom: 15em;
+      }
+    }
+  }
+
+  &__header {
+    @include type-header-primary-xlarge;
+    color: $black;
+    max-width: $column-width * 8;
+    margin: 0;
+    
+    &--strong {
+      font-family: "Benton Sans Bk";
+    }
+  }
+  
+  &__inline-header-graphic {
+    display: inline-block;
+    max-height: .75em;
+    max-width: 1em;
+  }
+
+  &__subheader {
+    @include type-subheader-primary-xlarge;
+    max-width: $column-width * 6;
+    color: $black;
+    margin: 0 0 1em;
+    
+    .PageTitle--title-only & {
+      max-width: $column-width * 8;
+    }
+    &.LimitedOffer {
+      display: inline-block;
+      @include type-header-secondary;
+      text-transform: uppercase;
+      color: $purple;
+      border-top: 1px solid $purple;
+      padding-top: 0.5em;
+    }
+  }
+  
+  &__description {
+    @include type-body-large;
+    max-width: $column-width * 6;
+    
+    a {
+      @include type-text-link;
+    }
+  }
+  
+  &__background {
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: absolute;
+    z-index: -1;
+    
+    .PageTitle--enterprise & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fenterprise-people.svg?1509428845204);
+      height: 65vw;
+      width: 65vw;
+      right: 10vw;
+      bottom: -80vw;
+      
+      @media (min-width: $bp-small) {
+        bottom: -70vw;
+      }
+
+      @media (min-width: $bp-medium) {
+        height: 50vw;
+        width: 50vw;
+        bottom: -55vw;
+      }
+
+      @media (min-width: $bp-large) {
+        height: 67vw;
+        width: 67vw;
+        bottom: -67vw;
+      }
+      @media (min-width: $bp-xlarge) {
+        right: 2vw;
+        bottom: -61em;
+        max-height: 60em;
+      }
+    }
+    
+    .PageTitle--integrations & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FmanuscriptIntegrations.svg?1509641586601);
+      height: 65vw;
+      width: 65vw;
+      right: 10vw;
+      bottom: -80vw;
+      background-size: contain;
+      
+      @media (min-width: $bp-small) {
+        bottom: -70vw;
+      }
+
+      @media (min-width: $bp-medium) {
+        height: 50vw;
+        width: 50vw;
+        bottom: -55vw;
+      }
+
+      @media (min-width: $bp-large) {
+        height: 67vw;
+        width: 67vw;
+        bottom: -67vw;
+      }
+      @media (min-width: $bp-xlarge) {
+        right: 2vw;
+        bottom: -61em;
+        max-height: 60em;
+      }
+    }    
+    
+    .PageTitle--taskmanagement & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FtaskManagement.svg?1509601731705);
+    }
+    
+    .PageTitle--legal & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FlegalStuff.svg?1509971278195);
+      
+      @media (min-width: $bp-small) {
+        bottom: -45vw !important;
+      }
+      @media (min-width: $bp-large) {
+        bottom: -45vw !important;
+        right: -6vw !important;
+      }
+      @media (min-width: $bp-xlarge) {
+        bottom: -38vw !important;
+        right: -12vw !important;
+      }        
+    }    
+    
+    .PageTitle--alternative & {
+      background-image: none;
+      
+      @media (min-width: $bp-small) {
+        background: none;
+      }
+      @media (min-width: $bp-large) {
+        background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Falternative.svg?1509726547254);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        position: absolute;
+        max-height: 30em !important;
+        bottom: -25vw !important;
+      }
+      @media (min-width: $bp-xlarge) {
+        bottom: -20vw !important;
+      } 
+    }    
+    
+    .PageTitle--smartscheduling & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FsmartScheduling.svg?1509630956352);
+    }          
+    
+    .PageTitle--security & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fsecurity.svg?1509624534685);
+    }    
+    
+    .PageTitle--versioncontrol & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FversionControl.svg?1509625383168);
+    }      
+    
+    .PageTitle--crashreporting & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FcrashReporting.svg?1509621190163);
+    } 
+    
+    .PageTitle--emailsupport & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FemailSupport.svg?1509621219219);
+    } 
+    
+    .PageTitle--documentcollaboration & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FdocumentCollaboration.svg?1509624074172);
+    }     
+    
+    .PageTitle--scrumboards & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FscrumBoards.svg?1509621851193);
+      max-height: 10em !important;
+      
+      @media (min-width: $bp-small) {
+        bottom: -25vw !important;
+        max-height: 30em !important;
+      }
+      @media (min-width: $bp-large) {
+        bottom: -15vw !important;
+      }
+      @media (min-width: $bp-xlarge) {
+        bottom: -15vw !important;
+      }       
+    } 
+    
+    .PageTitle--kanbanboards & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FkanbanBoards.svg?1509633504505);
+      max-height: 10em !important;
+      
+      @media (min-width: $bp-small) {
+        bottom: -25vw !important;
+        max-height: 30em !important;
+      }
+      @media (min-width: $bp-large) {
+        bottom: -15vw !important;
+      }
+      @media (min-width: $bp-xlarge) {
+        bottom: -15vw !important;
+      }       
+    }     
+    
+    .PageTitle--codereviews & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FcodeReview.svg?1509621185050);
+    }
+    
+    .PageTitle--timetracking & {
+      background-image: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FtimeTracking.svg?1509621861197);
+      max-height: 10em !important;
+      
+      @media (min-width: $bp-small) {
+        bottom: -25vw !important;
+        max-height: 30em !important;
+      }
+      @media (min-width: $bp-large) {
+        bottom: -15vw !important;
+      }
+      @media (min-width: $bp-xlarge) {
+        bottom: -15vw !important;
+      }      
+    }    
+    
+    .PageTitle--titleimage & {
+      background-size: contain;
+      height: 60vw;
+      width: 60vw;
+      right: 10vw;
+      bottom: -40vw;
+      display: none;
+      
+      @media (min-width: $bp-small) {
+        display: block;
+        bottom: -45vw;
+      }
+
+      @media (min-width: $bp-medium) {
+        height: 55vw;
+        width: 55vw;
+        bottom: -40vw;
+      }
+
+      @media (min-width: $bp-large) {
+        max-height: 45em;
+        width: 60vw;
+        bottom: -40vw;
+      }
+      @media (min-width: $bp-xlarge) {
+        right: 2vw;
+        bottom: -35em;
+        max-height: 45em;
+      }
+    }    
+  }
+
+  &__background-arms {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    
+    @media (min-width: $bp-small + 8) {
+      width: 70%;
+      right: 5em;
+      transform: scale(1.4);
+    }
+    
+    @media (min-width: $bp-medium + 8) {
+      width: 50%;
+      right: 10em;
+      transform: scale(1.5);
+      bottom: 0;
+    }
+    
+    @media (min-width: $bp-large) {
+      right: 20em;
+      bottom: 7em;
+    }
+    
+    @media (min-width: $bp-xlarge) {
+      bottom: 10em;
+    }
+  }
+  
+
+  &__background-arm-1 {
+    position: absolute;
+    bottom: -27em;
+    height: 26em;
+    width: 6em;
+    right: 2em;
+
+    @media (min-width: $bp-large) {
+      bottom: -37em;
+    }
+  }
+
+  &__background-arm-2 {
+    position: absolute;
+    bottom: -32em;
+    height: 25em;
+    width: 15em;
+    right: 1em;
+    
+    @media (min-width: $bp-large) {
+      bottom: -47em;
+      height: 30em;
+      right: 0;
+    }
+  }
+
+  &__background-arm-3 {
+    position: absolute;
+    bottom: -37em;
+    height: 35em;
+    width: 22em;
+    right: 11em;
+    
+    @media (min-width: $bp-large) {
+      right: 3em;
+      bottom: -44em;
+      height: 45em;
+    }
+  }
+}
+
+.FeatureTop {
+  padding: 3em 0 10em;
+  @include Section(left);
+  z-index: map-get($section-z-index, FeatureTop);
+}
+
+.Signup {
+  padding: 3em 0 10em;
+  @include Section(left);
+  z-index: map-get($section-z-index, Signup);
+}
+
+.Login {
+  padding: 3em 0 10em;
+  @include Section(left);
+  z-index: map-get($section-z-index, Login);
+}
+
+.ContactForm {
+  padding: 3em 0 10em;
+  @include Section(left);
+  z-index: map-get($section-z-index, ContactForm);
+}
+
+.ContactDetails {
+  position: relative;
+  z-index: map-get($section-z-index, ContactDetails);
+  color: $white;
+
+  @media (min-width: $bp-medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include color-background(
+    ContactDetails,
+    30deg,
+    0,
+    auto,
+    40.75em,
+    100%,
+    $aqua,
+    ($aqua, $purple, $yellow)
+  )
+
+}
+
+.FeatureMain {
+  @include Section(left);
+  z-index: map-get($section-z-index, FeatureMain);
+  margin-top: 8em;
+  padding-top: 5em;
+  padding-bottom: 15em;
+  color: $white;
+
+  @media (min-width: $bp-large) {
+    padding-bottom: 25em;
+  }
+
+  @include color-background(
+    FeatureMain,
+    30deg,
+    0,
+    auto,
+    40.75em,
+    100%,
+    $aqua,
+    ($aqua, $red, $yellow)
+  )
+}
+
+.SubsectionColumn {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $bp-medium) {
+    width: 50%;
+  }
+
+  &--right {
+    @media (min-width: $bp-medium) {
+      top: 13.4vw;
+    }
+
+    @media (min-width: $bp-large) {
+      top: 28.87vw;
+    }
+
+    @media (min-width: $bp-max) {
+      top: 30.3333333em;
+    }
+  }
+}
+
+.Subsection {
+  position: relative;
+  width: 100%;
+  padding: 2em 0 5em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  
+  &.Subsection--with-multiple-icons {
+    padding-top: 2em;
+  }
+
+  @media (min-width: $bp-small) {
+    padding: 3em 0;
+    
+  }
+
+  @media (min-width: $bp-medium) {
+    justify-content: flex-end;
+    padding: 4em 0 5em;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: 6em 0 12em;
+    
+    &.Subsection--with-multiple-icons {
+      padding-top: 2em;
+    }
+
+  }
+
+  @media (min-width: $bp-xlarge) {
+    padding: 6em 0 15em;
+  }
+
+  .SubsectionColumn--right & {
+    @media (min-width: $bp-medium) {
+      justify-content: flex-start;
+    }
+  }
+  
+  // This page has no titles and just icons,
+  // so it needs lesst padding on the top.
+  [data-page=how-it-works] & {
+    
+  }
+  
+  [data-page=how-it-works] .SubsectionColumn--right & {
+    @media (min-width: $bp-large) {
+      padding: 4em 0 14em;
+    }
+
+    @media (min-width: $bp-xlarge) {
+      padding: 1em 0 20em;
+    }
+  }
+
+
+  @include color-background(
+    Subsection,
+    30deg,
+    0,
+    auto,
+    40.75em,
+    200%,
+    $red,
+    ()
+  )
+
+  .Subsection__color-block {
+    @media (min-width: $bp-xlarge) {
+      top: 34.6375em;
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: -2.5em;
+    max-width: $column-width * 5;
+    padding: 0 $grid-gutter 0;
+    margin: 0;
+    flex: 1 1 auto;
+    
+    @media (min-width: $bp-medium) {
+      margin: 0;
+    }
+
+    @media (min-width: $bp-large) {
+      padding: 0 ($column-width / 2);
+      margin: 0 auto;
+    }
+
+    @media (min-width: $bp-xlarge) {
+      margin: 0;
+      padding: 0 $column-width 0 0;
+
+      .SubsectionColumn--right & {
+        padding: 0 0 0 $column-width;
+      }
+
+      top: -3.5em;
+    }
+  }
+
+  &__map {
+    height: 28em;
+    margin: 4em 0 2em;
+
+    @media (min-width: $bp-medium) {
+      height: 34em;
+    }
+
+    @media (min-width: $bp-large) {
+      margin-top: 2em;
+    }
+  }
+
+  &__header {
+    @include type-header-primary;
+    margin: 1em 0 .5em;
+    flex: 1 1 auto;
+  }
+
+  &__header-icon {
+    max-width: 1em;
+    max-height: .75em;
+    margin-right: .125em;
+    display: inline-block;
+    
+    &--large {
+      max-width: 2.5em;
+      max-height: none;
+      margin-bottom: .25em;
+    }
+  }
+
+  &__body {
+    @include type-body-large;
+    flex: 1 1 auto;
+    
+    ul, ol {
+      margin: 0 0 2em;
+      padding-left: 1em;
+    }
+    
+    li {
+      margin-bottom: .75em;
+    }
+    
+    &--large-list {
+      @include type-body-feature;
+      
+      ul {
+        padding-left: 0;
+      }
+      
+      li {
+        margin-bottom: .25em;
+        list-style: none;
+      }
+    }
+    
+    [data-page=how-it-works] & {
+      height: auto;
+      
+      @media (min-width: $bp-small) {
+        height: 10em;
+      }
+    }
+
+  }
+}
+
+// Subsection customizations
+$subsections: (
+  aqua: $aqua,
+  pink: $pink,
+  red: $red,
+  green: $green,
+  purple: $purple,
+  blue: $blue
+);
+
+@each $name, $color in $subsections {
+  .Subsection--#{$name} {
+    .Subsection__color-block {
+      background-color: $color;
+    }
+  }
+}
+
+.Satisfaction {
+  position: relative;
+  background: #56CAD4;
+  color: #fff;
+  width: 130vw;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  left: calc(50% - 65vw);
+  top: calc(13.4vw - 9.5em);
+  text-align: center;
+  z-index: 10;
+  margin-top: 5em;
+  
+  &__content {
+    max-width: $max-width;
+    padding: 2em 25vw;
+    margin: 0 auto;
+    @include type-body-large;
+    
+    @media (min-width: $bp-small) {
+      padding: 2em 20vw;
+    }
+    
+    @media (min-width: $bp-medium) {
+      padding: 2em 15vw;
+      font-size: 1.333333em;
+    }
+    
+    a {
+      color: $white;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+  
+  @media (min-width: $bp-large) {
+    transform: rotate(30deg);
+    top: calc(28.87vw - 21em);
+  }
+  @media (min-width: $bp-xlarge) {
+    top: calc(28.87vw - 25.5em);
+  }
+  @media (min-width: $bp-max) {
+    top: 3.25em;
+  }
+}
+
+.fb_feature_nav ul {
+  list-style: none;
+  padding: 0;
+}

@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      How Manuscript Works
+    </h1>
+    <h2 class="PageTitle__subheader">
+      Project management that helps you to craft great software.
+    </h2>
+    <div class="PageTitle__background"></div>
+  </div>
+</section>
+
+<section class="Section FeatureTop">
+  <div class="Section__content">
+    <div class="HowItWorksVideo">
+      <div class="HowItWorksVideo__container">
+        <iframe class="HowItWorksVideo__embed" src="https://www.youtube-nocookie.com/embed/Nde8Yq5ljRc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>      
+    </div>
+  </div>
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fdude.svg?1509502033093" class="Subsection__header-icon" alt="A mountain" />Just enough process
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            You’re able to stick to the workflow that works for you. Manuscript enables Agile project management, with just enough process to follow your own workflow, so your team doesn’t have to jump through hoops.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-glitch.svg?1509502033104" class="Subsection__header-icon" alt="Two fish, the Glitch logo" />Better customization
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Your tools work exactly the way you need them to. That’s why our free, best-of-breed integrations are fully customizable, using the power of Glitch — the friendly collaborative coding community.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--pink">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-share.svg?1509502033104" class="Subsection__header-icon" alt="Share knowledge" />Share knowledge
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            You’re able to share knowledge and plans with everyone. Manuscript incorporates document collaboration tools that make sharing technical specs, plans, design docs, knowledge base articles, and more, effortless. So no team member ever feels out of the loop.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-scrum.svg?1509502033104" class="Subsection__header-icon" alt="Kanban and Sprint boards" />Cases, not issues
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            You don’t end up with more work than you can handle. Manuscript uses cases to organize your project, making it easy to gather all relevant information in one place. You can ensure a balanced workload by easily moving tasks between people, teams, and sprints, with Kanban and Sprint boards.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-email.svg?1509305214993" class="Subsection__header-icon" alt="Fight email" />Email prevention
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            You aren't swamped and distracted by email. Tools like Slack help your team send less email, but what about emails from outside your team? Manuscript captures bug reports, requests and inquiries, triaging them automatically for you with the integrated Support Help Desk.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-row.svg?1509502033104" class="Subsection__header-icon" alt="Two people rowing a boat" />Keep work flowing
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Work keeps flowing, and everyone knows what needs to be done and when. Easily see and set estimates and priorities. Then see where work is getting held up, reassign tasks with drag and drop, and divide complex issues up into tasks and subtasks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-slap.svg?1509502033104" class="Subsection__header-icon" alt="Two people, high-fiving" />Bring teams together
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Your support and development teams can easily work together. Manuscript brings customer feedback and issue tracking together. Developers have all the context they need to find the best solutions, support can update customers in a timely manner, and nothing falls between the cracks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--aqua">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-hero.svg?1509502033104" class="Subsection__header-icon" alt="Someone flying with a cape" />Empower customers
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Your customers are empowered to help themselves. Give your customers the resources to solve their own problems. Create a knowledge base about your product with FAQs and documentation you can be proud of, kept up to date easily with deep-case integration.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-social.svg?1509305215050" class="Subsection__header-icon" alt="A bug" />Be proactive
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            You’re able to be proactive in resolving issues. With Crash Reporting, you know which bugs to prioritize as your software can report errors, exceptions, and in-app customer feedback itself. You can spot and resolve issues before customers even report them.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--pink">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-heart.svg?1509502033104" class="Subsection__header-icon" alt="A heart" />Devtools at the heart
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Put your code tools are at the heart of your development process. Code hosting, version control, and peer code review tools are deeply integrated directly into Manuscript.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block"></div>
+  <div class="Section__content">
+    <div class="GetStartedBottom__copy">
+      <h4 class="GetStartedBottom__header">
+          Learn how Manuscript works:
+      </h4>
+      <p class="GetStartedBottom__subheader">
+        The first 14 days are on us. No credit card required.
+      </p>
+    </div>
+    {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='aqua', buttonColor='blue') }}
+  </div>
+</section>
+
+ <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+    var __lc = {};
+    __lc.license = 6608381;
+    (function() {
+      var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+      lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+<!-- End of LiveChat code -->
+{% endblock content %}

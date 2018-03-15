@@ -1,0 +1,319 @@
+$white: #fff;
+$black: #060628;
+$purple: #8959F6;
+$pink: #E6ABFA;
+$green: #75CD89;
+$aqua: #56CAD4;
+$yellow: #F9D348;
+$red: #EE5256;
+$blue: #3933FF;
+$deep-blue: #45455e;
+
+$gray-dark: #828293;
+$gray-light: #dfdfe6;
+
+
+$base-size: 93.75%;
+$max-width: 76rem;
+$max-wrapper-width: 105em;
+$grid-gutter: (4rem / 3);
+$gutter-width: $grid-gutter;
+$border-radius: (1rem / 3);
+$column-width: (($max-width - $grid-gutter * 2) / 10);
+
+$bp-xsmall: 24em * 0.9375; // 360px
+$bp-small:  30em * 0.9375; // 450px
+$bp-medium: 50em * 0.9375; // 750px
+$bp-large:  76em * 0.9375; // 1140px
+$bp-xlarge: 90em * 0.9375; // 1350px
+$bp-max: $max-wrapper-width;
+
+
+// We use this to make sure the sections overlap correctly.
+$section-z-index: (
+  PageTitle: 12,
+  Introduction: 12,
+  FeatureTop: 12,
+  Signup: 12,
+  ContactForm: 12,
+    ContactDetails: 11,
+  FeatureMain: 11,
+  SoftwareThatMatters: 11,
+  UpfrontPricing: 10,
+  GreatSoftware: 13,
+  PricingBreakdown: 13,
+  PricingKiln: 14,
+  HowItWorks: 14,
+  MadeBy: 15,
+  GetStartedBottom: 16,
+  Footer: 99
+);
+$z-index-top: 10000;
+
+@mixin color-background(
+  $prefix,
+  $angle,
+  $left,
+  $right,
+  $top,
+  $height,
+  $background-color,
+  $rows: ()
+) {
+  .#{$prefix}__color-block {
+    @include color-block(
+      ($angle / 2),
+      $left,
+      $right,
+      ($top / 2),
+      $height,
+      $background-color
+    )
+
+    @media (min-width: $bp-large) {
+      transform: skewY($angle);
+      top: $top;
+    }
+
+    @media (min-width: $bp-xlarge) {
+      top: $top * .85;
+    }
+  }
+
+  $numKeys: length($rows);
+  @each $color in $rows {
+    $index: index($rows, $color);
+    $multiplier: $numKeys + 1 - $index;
+    $height: 1em;
+
+    .#{$prefix}__color-border--#{index($rows, $color)} {
+      $rowTop: $top - ($height * $multiplier);
+      @include color-block(
+        ($angle / 2),
+        $left,
+        $right,
+        ($top / 2) - ($height * $multiplier),
+        $height,
+        $color
+      )
+
+      @media (min-width: $bp-large) {
+        $height: 1.25em;
+        transform: skewY($angle);
+        top: $top - ($height * $multiplier);
+        height: $height + .05;
+      }
+
+      @media (min-width: $bp-xlarge) {
+        top: ($top - ($height * $multiplier)) * .85;
+      }
+    }
+  }
+}
+
+@mixin color-block(
+  $angle,
+  $left,
+  $right,
+  $top,
+  $height,
+  $background-color
+) {
+  position: absolute;
+  transform: skewY($angle);
+  width: 200em;
+  height: $height;
+  background-color: $background-color;
+  top: $top;
+  left: $left;
+  right: $right;
+  z-index: -1;
+}
+
+@mixin Section($anchor: left, $content-position: static, $fixed-margin: $column-width) {
+  position: relative;
+
+  @media (min-width: $bp-large) {
+    @if($anchor == right or $anchor == rightCustom) {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+  }
+
+  .Section__content {
+    @include grid($anchor, $fixed-margin);
+    position: $content-position;
+  }
+}
+
+@mixin grid($type: left, $fixed-margin: $column-width) {
+  max-width: $max-width;
+  padding: 0 $grid-gutter;
+  margin: 0 auto;
+
+  @if($type == center) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @if($type == left) {
+    margin: 0;
+
+    @media (min-width: $bp-large) {
+      margin: 0 auto;
+    }
+  }
+
+  @if($type == right) {
+    @media (min-width: $bp-medium) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $bp-large) {
+      width: $max-width;
+    }
+
+    @media (min-width: $bp-xlarge) {
+      top: 0;
+      position: relative;
+    }
+
+    @media (min-width: $bp-max) {
+      top: -6em;
+    }
+  }
+}
+
+// Benton Sans Thin
+@mixin type-header-primary {
+  font: #{(32em / 15)}/1.1 "Benton Sans Lt";
+  font-style: Normal;
+  font-weight: Normal;
+
+  @media (min-width: $bp-small * 1.25) {
+    font-size: 2.8em;
+  }
+}
+
+// Benton Sans Thin
+@mixin type-header-primary-xlarge {
+  @include type-header-primary;
+
+  @media (min-width: $bp-large) {
+    font-size: (68em / 15);
+  }
+}
+
+
+// Benton Sans Bold
+@mixin type-header-secondary {
+  font: 1.6em/1.1 "Benton Sans Bd";
+  font-style: Normal;
+  font-weight: Normal;
+
+  // @media (min-width: $bp-large) {
+  //   font-size: 2.5em;
+  // }
+}
+
+@mixin type-header-secondary-book {
+  font: 1.4em/1.1 "Benton Sans Bk";
+  font-style: Normal;
+  font-weight: Normal;
+
+  // @media (min-width: $bp-large) {
+  //   font-size: 2.5em;
+  // }
+}
+
+// Benton Sans Bold
+@mixin type-header-secondary-long {
+  font: 1.4em/1.1 "Benton Sans Bd";
+  font-style: Normal;
+  font-weight: Normal;
+
+  @media (min-width: $bp-medium) {
+    font-size: 1.6em;
+  }
+
+  // @media (min-width: $bp-large) {
+  //   font-size: 2.5em;
+  // }
+}
+
+
+// Benton Sans Thin
+@mixin type-subheader-primary {
+  font: #{(4em / 3)}/1.2 "Benton Sans Lt";
+  font-style: Normal;
+  font-weight: Normal;
+
+  @media (min-width: $bp-small * 1.25) {
+    font-size: 1.6em;
+  }
+}
+
+@mixin type-subheader-primary-xlarge {
+  @include type-subheader-primary;
+
+  @media (min-width: $bp-large) {
+    font-size: (37em / 15);
+  }
+}
+
+// Benton Sans Book
+@mixin type-body-large($line-height: 1.5) {
+  font: 1.2em/#{$line-height} "Benton Sans Bk";
+  font-style: Normal;
+  font-weight: Normal;
+}
+
+@mixin type-body-feature($line-height: 1.5) {
+  font: 1.333333em/#{$line-height} "Benton Sans Lt";
+  font-style: Normal;
+  font-weight: Normal;
+  
+  @media (min-width: $bp-medium) {
+    font-size: 1.666666em;
+  }
+}
+
+// Benton Sans Book
+@mixin type-body($line-height: 1.5) {
+  font: 1em/#{$line-height} "Benton Sans Bk";
+  font-style: Normal;
+  font-weight: Normal;
+
+  @media (min-width: $bp-large) {
+    // font-size: (4em / 3);
+  }
+}
+
+// Benton Sans Book
+@mixin type-body-small {
+  font: 1em/1.25 "Benton Sans Bk";
+  font-style: Normal;
+  font-weight: Normal;
+}
+
+@mixin type-body-xsmall {
+  font: #{(12em / 15)}/1 "Benton Sans Bk";
+  font-style: Normal;
+  font-weight: Normal;
+}
+
+
+@mixin type-body-tight {
+  @include type-body(1.3);
+}
+
+@mixin type-text-link {
+  color: $blue;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}

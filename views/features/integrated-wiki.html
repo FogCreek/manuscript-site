@@ -1,0 +1,52 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--documentcollaboration PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    6. Document Collaboration
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Collaborate, share knowledge and gather feedback.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FDocument.svg?1509026022530" />
+    Document Collaboration
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>The integrated Wiki makes collaboration easy. Share technical specs, design docs, knowledge base articles, and more. The Wiki is your go-to reference for all shared knowledge, so no team member will ever be out of the loop again.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FBook.svg?1509026097746" />    
+    Create Public Documentation For Customers
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Make a part of your Wiki publicly available, enabling customers to view and contribute. Grow a knowledge base that’s all about your products. Deep case integration means you can keep on top of your documentation, keeping it up to date with ease.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCompose.svg?1509026191691" />    
+    Powerful Rich Text Editor 
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Create beautiful, complete specs and user documentation or write-up meeting minutes with ease: include tables, images, outside documents, and even an auto-generated table of contents.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCompass.svg?1509026244356" />    
+    Track Changes Easily
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Keep your team’s knowledge safe and secure, and know who changed what. A wiki page can be edited by any team member who has access. Admins can view previous versions and revert pages with just a few clicks.</p>
+  </div>  
+</div>
+{% endblock %}

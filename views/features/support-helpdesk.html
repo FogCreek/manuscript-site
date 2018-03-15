@@ -1,0 +1,54 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--emailsupport PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    4. Email Support
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Customer feedback and issues together, in one place.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FMail.svg?1509045279346" />
+    Email Support
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Use Issue Desk to handle customer interactions over email for multiple mailboxes. Emails become cases, which you can treat like any other: prioritize it, assign it, track it, and of course, reply to it.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FMerge.svg?1509045381310" />    
+    Email Triage Done For You
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Talk to your customers from inside Manuscript. Set up support mail so that customer emails go straight to the relevant team or member’s inbox.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FServiceCounter.svg?1509045537880" />    
+    Timely Customer Support Taken Care Of
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Automated Replies send a personalized response to all incoming emails, letting your customers know their inquiries have been received.</p>
+    <p>You can set due dates automatically, ensuring your customers receive timely responses.</p>
+    <p>Inquiries demand a different kind of response to Bugs or Features, that’s why you can set different workflows by type of email.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FFeed.svg?1509028189041" />    
+    Save Time with Templated Responses
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Repeat yourself, easily, with Snippets. Send quick, pre-formed responses to answer common questions that your team received. Save time and dramatically improve your team’s response rates.</p>
+  </div>  
+</div>
+{% endblock %}

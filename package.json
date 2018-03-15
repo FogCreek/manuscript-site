@@ -1,0 +1,40 @@
+{
+  "name": "manuscript-marketing-site",
+  "version": "0.0.1",
+  "description": "I am about Manuscript",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.5",
+    "express": "^4.16.1",
+    "node-sass": "^4.5.3",
+    "node-sass-middleware": "^0.11.0",
+    "nunjucks": "^3.0.1",
+    "postcss": "^6.0.13",
+    "postcss-middleware": "^1.1.3",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "winston": "^2.4.0",
+    "winston-loggly-bulk": "^2.0.1",
+    "cookie-parser": "^1.4.3"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/dapper-beach"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

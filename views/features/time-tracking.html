@@ -1,0 +1,56 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--timetracking PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    2. Time Tracking
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Deliver projects on time with data, not guesses.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FStopwatch.svg?1509024671705" />
+    Time Tracking
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Time and estimates underpin an efficient project. Recording where your resources are being spent provides you with the insight you need to resolve delivery issues.</p>
+    <p>Spot trends in productivity over time to ensure you’re on top of team motivation and output.</p>
+    <p>Boost transparency with management and clients by giving everyone involved in a project an accurate picture of work completed and progress towards key milestones.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FList.svg?1509024944633" />    
+    Know How Much Work You Have Left
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Time estimates are incredibly useful. They give your colleagues an idea of how much work remains to be done. For a complex project, estimates show the big picture and help you meet your goals.</p>
+    <p>Over time they help you spot trends in tasks and projects - so you know the activities that often cause problems, and you can plan better for them in the future.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FClock.svg?1509025059304" />    
+    Track Time Spent On Each Case
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Log time seamlessly with timesheets - either manually or with our built-in "Start Work" and "Stop Work" features to automatically track how much time you’ve spent on a case.</p>
+    <p>This granularity in reporting means you can resolve issues with particular tasks, and understand the impact at a project level.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FJudicialScales.svg?1509025218832" />    
+    Ensure a Balanced Workload
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Know how much work each member has assigned to them, and re-assign tasks as necessary to ensure no-one becomes a bottleneck, and work keeps flowing.</p>
+  </div>  
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--smartscheduling PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    3. Smart Scheduling
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Know when you’ll really complete that project.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FPath.svg?1509025336239" />
+    Smart Scheduling
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Manuscript uses our exclusive, sophisticated statistical algorithm to produce project completion date probability distributions that we call Smart Schedules.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCalendar.svg?1509025373095" />    
+    Predict Project Completion Dates
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Smart Scheduling predicts project schedules by looking at your historical track record. From that, it produces a probability distribution curve, so that you know for any given date, the probability that your project will be completed by it.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FThumbsUp.svg?1509025424880" />    
+    Built For Your Reality 
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>We know what estimating and time logging is really like in a typical organization: Some contributors are consistent and fastidious with their time logging and estimates. Others… not so much.</p>
+    <p>That’s why Smart Scheduling works when it lacks historical data, it adapts to lousy estimators, it works around forgetful team members, and it remembers to factor in holidays and vacation time. It even takes into account contributions from those who only occasionally get a chance to work on project stuff too, like busy managers!</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCheckmark.svg?1509025490305" />    
+    Improve Estimates and Deliver On Time
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Over time, Smart Scheduling can help you improve your estimating and highlight potential problems with project schedules. You can identify poor estimates and look into the causes of them. It’s easy to spot missing estimates too, so you know what to chase up.</p>
+    <p>Smart Schedules give you a clear indication of when you’re really likely to complete your project. And it can help you understand the impact different tasks have on your schedule. So you can decide what work must be cut so you can be certain of completion by a specific date.</p>
+  </div>  
+</div>
+{% endblock %}

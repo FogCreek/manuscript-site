@@ -1,0 +1,65 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--security PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    Manuscript Infrastructure
+    </h1>
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    Firewalls and Logical Security
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Our data center has redundant firewalls and many networks.  Each of these networks contains devices that serve a single function.  For example, the database servers are on one network, and the web servers are on another.  This is very important, as it provides a much stronger defense against attack.</p>
+
+    <p>In addition, we instate a strict "block all" policy for communication between networks.  No service is allowed to communicate across the network line unless it follows a strictly defined rule set.  We regularly review both this rule set and actual inter-network communication to ensure that nothing "extra" crosses network boundaries.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Access Control
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Strict security controls permit only the Manuscript systems administration team and the Manuscript Development Lead to have access to the system.  Fog Creek stands by a policy that strictly prohibits its employees from examining customer data without permission from the customer, and we maintain an audit trail.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Stability
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Customer data is backed up daily onsite. Backup files are archived for historical purposes, so data can be recovered quickly in the unlikely event of a database server failure.</p>
+
+    <p>In addition, the historical data is encrypted and shipped to Amazon S3 every night. This means that your data is safe even in the event of a large-scale equipment loss or disaster.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Upgrades
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Fog Creek Software has the ability to maintain a different version of Manuscript for each account. This enables us to first apply an upgrade to our own set of test accounts, then gradually roll out the upgrade to customers. Thus, any problem with upgrading is caught early and affects few, if any, Manuscript customers.</p>
+  </div>  
+  <h4 class="GraphicExample__title">
+    Security
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Manuscript has a number of <a href="/features/security">security features</a> to help keep your data safe.</p>
+  </div>  
+  <h4 class="GraphicExample__title">
+    Privacy
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>We take your privacy seriously. Read our <a href="/privacy">privacy policy</a>.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Additional questions or concerns?
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Please contact us via <a href="mailto:customer-service@fogcreek.com">email</a>.</p>
+  </div>  
+</div>
+{% endblock %}

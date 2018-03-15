@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      Get in touch
+    </h1>
+  </div>
+</section>
+
+<section class="Section ContactForm">
+  <div class="Section__content">
+    <form class="Form Form--knowledge-base emailForm">
+      <header class="Form__section-header-group">
+        <div class="Form__section-header">
+          Find quick answers
+        </div>
+        <div class="Form__section-description">
+          Our easily-searchable Knowledge Base is kept up to date with the latest information and answers to common questions about Manuscript. We also have resources for our system status and release notes.
+        </div>
+      </header>
+      <div class="Form__fields">
+        {{ forms.TextInputLarge(name='knowledge_base', placeholder='Search the knowledge base here…') }}
+      </div>
+    </form>
+
+    <form class="Form Form--contact">
+      <header class="Form__section-header-group">
+        <div class="Form__section-header">
+          Contact Us
+        </div>
+        <div class="Form__section-description">
+          Our support hours are 9am to 5pm EST (UTC-5) Monday through Friday, but we try to make ourselves available outside those hours as much as possible.
+        </div>
+      </header>
+      <div class="Form__fields">
+        <div class="Form__field-column">
+          <div class="Form__field">
+            {{ forms.TextInput(extraClass='Form__input', color='aqua', name='subject', placeholder='Subject', type='text')}}
+            <div class="Form__field-note"></div>
+          </div>
+          <div class="Form__field">
+            {{ forms.TextInput(extraClass='Form__input', color='green', name='name', placeholder='Your name', type='text')}}
+            <div class="Form__field-note"></div>
+          </div>
+          <div class="Form__field">
+            {{ forms.TextInput(extraClass='Form__input', color='pink', name='email', placeholder='Your Email', type='email')}}
+            <div class="Form__field-note"></div>
+          </div>
+          <div class="Form__field">
+            {{ forms.TextInput(extraClass='Form__input', color='red', name='company_name', placeholder='Company name', type='text')}}
+            <div class="Form__field-note"></div>
+          </div>
+          <div class="Form__field">
+            {{ forms.TextInput(extraClass='Form__input', color='purple', name='url', placeholder='Manuscript URL', type='text')}}
+            <div class="Form__field-note"></div>
+          </div>
+          <div class="Form__field Form__field--file">
+            {{ forms.FileInput(name='file', extraClass='Form__input') }}
+            <div class="Form__field-note">Maximum file size: 2MB</div>
+          </div>
+        </div>
+        <div class="Form__field-column">
+          <div class="Form__field Form__field--stretch">
+            {{ forms.TextareaLarge(name='contact_body', placeholder='Message') }}
+            <div class="Form__field-note"></div>
+          </div>
+        </div>
+      </div>
+      <div class="Form__actions">
+        {{ forms.Button(label='Send', type='submit', color='blue', extraClasses='Form__submit')}}
+
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <div class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-email.svg?1509305214993" class="Subsection__header-icon" />Email
+        </div>
+        <div class="Subsection__body">
+          <p>
+            Customer Service: <a href="mailto:customer-service@fogcreek.com">customer-service@fogcreek.com</a>
+          </p>
+          <p>
+            Help site: <a href="https://help.fogcreek.com">help.fogcreek.com</a>
+          </p>
+          <p>
+            We answer all email within one business day. If it’s been one business day and you have not received a response from us, call us! It’s very likely that your message or our response got waylaid by the Internet.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="Subsection Subsection--pink ">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <div class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-phone.svg?1509305214993" class="Subsection__header-icon" />Phone
+        </div>
+        <div class="Subsection__body">
+          <p>
+            US and Canada: 1-866-FOG-CREEK (866-364-2733)
+          </p>
+          <p>
+            International: +1 (212) 279-2335
+          </p>
+          <p>
+            Fax: +1 (212) 279-2077
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <div class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-social.svg?1509305214993" class="Subsection__header-icon" />
+          Social
+        </div>
+        <div class="Subsection__body">
+          {% set modifierClass = "SocialIcons--white" %}
+          {% include "components/SocialIcons.html" %}
+        </div>
+      </div>
+    </div>-->
+
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <div id="map" class="Subsection__map"></div>
+        <div class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-office.svg?1509305214993" class="Subsection__header-icon" />Our office
+        </div>
+        <div class="Subsection__body">
+          <p>
+            Fog Creek Software<br />
+            75 Broad Street, Suite 1904<br />
+            New York, NY 10004
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <div class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ficon-transit.svg?1509305214993" class="Subsection__header-icon" />
+          Transit
+        </div>
+        <div class="Subsection__body">
+          <p>
+            Our office is within 3 blocks of the 1, 2, 3, 4, 5, R, W, J and Z subway lines. The World Trade Center PATH station and A, C and E subway lines are also nearby.
+          </p>
+        </div>
+      </div>
+    </div>-->
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block page_scripts %}
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCjwukNY1tUB5LXDb-OO2oneGtUMpRh7OM"></script>
+<script>
+function map_init() {
+    var myLatLong = new google.maps.LatLng(40.7046866, -74.0112304);
+    var mapOptions = {
+        center: myLatLong,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    var contentString = '<div id="content">' +
+  '<h2>Fog Creek Software</h2>' +
+  '<div>' +
+  '<p>75 Broad Street, Suite 1904<br/>' +
+  'New York, NY 10004</p>' +
+  '</div>' +
+  '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLong,
+        icon: "https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fkiwiicon.png?1509373004616",
+        map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', map_init);
+</script>
+{% endblock %}

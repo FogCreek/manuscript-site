@@ -1,0 +1,63 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--versioncontrol PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    9. Code Management
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Version control and source code hosting for Git and Mercurial.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    Available in the Kiln add-on:
+  </h4>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FFeed.svg?1509028189041" />
+    Code Management
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Developers can keep coding without interruption. Report, track and fix bugs, update your code, and track the changes — all within one tool.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FTransfers.svg?1509028243475" />    
+    Branch and Merge with Ease
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Your team can work in any part of your code and merge in a sane way. Branching, cloning, pushing, or pulling are all made simple — whether you choose <a href="/features/git">Git</a> or <a href="/features/mercurial">Mercurial</a>.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FShield.svg?1509030298128" />    
+    Code Security with HTTPS, SSH, and Permissions
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Repository access is available via SSH or HTTPS. Add an additional layer of security and limit access to your projects with user-based access controls.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCheckmark.svg?1509025490305" />    
+    Stay on Top of Your Code
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Activity filters provide visibility into changes inside your code. Easily monitor updates across projects, repositories or recent commits. Filter activity by repo, project, user or activity type to focus on changes that require attention.</p>
+    <p>Visually track changes that have been made to a particular tag or build. You’ll easily see who’s contributing to a project or repository.</p>
+  </div> 
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FInfo.svg?1509025644501" />    
+    Get Notified of Key Changes
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Get email updates each time there’s a push made to any of your subscribed repositories. Email subscriptions and RSS updates keep you in the loop on progress.</p>
+  </div>   
+</div>
+{% endblock %}

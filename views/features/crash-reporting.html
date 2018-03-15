@@ -1,0 +1,53 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--crashreporting PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    5. Crash Reporting
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Resolve issues before customers even notice them.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FInfo.svg?1509025644501" />
+    Crash Reporting
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>We provide an API which allows you to send new bugs and feedback directly into Manuscript from any of your websites or applications.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FAlert.svg?1509025722725" />    
+    Understand The Impact On Customers
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Record the number of times an error has occurred in a single case about it. So you know how many customers it’s impacting.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FHammer.svg?1509025760910" />    
+    Know Whether It’s Really Fixed
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>You can gather and consolidate data about crashes, or even feature requests, for each version of your application that you release.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FMeeting.svg?1509025810895" />    
+    Let Customers Know You’re On The Case
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>You can show a custom message after a known issue has been detected.</p>
+    <p>Provide your customers with instructions detailing a workaround for the error. Or, you can even tell them that it has already been fixed in the next release of your product.</p>
+  </div>  
+</div>
+{% endblock %}

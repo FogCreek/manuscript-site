@@ -1,0 +1,53 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature PageTitle--titleimage PageTitle--scrumboards PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    7. Scrum Boards
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Agile Sprint and Iteration planning and management.
+    </h2>
+    <div class="PageTitle__background"></div>
+    {% include "components/FeatureLinks.html" %}
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FColumn.svg?1509013725276" />
+    Scrum Boards
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Construct and plan iterations from existing cases. Create milestones for your backlog, sprints, doing and done — or any other structure your team or project needs. Customize each project’s structure to match your ideal Agile or Scrum workflow.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FList.svg?1509024944633" />    
+    Build a Backlog With Ease
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>While planning your project backlog you can search existing cases. Whether adding a bug report or feature request, any case can become part of your backlog. Use filters to quickly build the backlog using saved searches or other criteria, and add new cases to it directly.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCards.svg?1509026398186" />
+    Balance Work by Hours or Points
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>We make it easy to ensure a balanced workload across your team when planning and during a sprint. Estimates can be added to cases from the planning screen, and if you prefer story points, then you can switch between hours and story points too.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    <img class="mini_feature icon svg-inject" src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FCircleAdd.svg?1509027850980" />    
+    Allocate Resources within a Sprint
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>To add a case to your sprint, just drag it from your backlog to the sprint milestone, and drop it in the location you want. Drag and drop cases to change their order in the planner as well.</p>
+    <p>Within the sprint, you can group cases by their priority, assignee, or status. Time is tracked across cases so you can always see remaining work.</p>
+  </div>  
+</div>
+{% endblock %}

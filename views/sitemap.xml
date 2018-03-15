@@ -1,0 +1,117 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <priority>0.8</priority>
+  <loc>http://www.manuscript.com/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <priority>0.8</priority>
+  <loc>http://www.manuscript.com/how-it-works</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <priority>0.8</priority>
+  <loc>http://www.manuscript.com/try</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <priority>0.8</priority>
+  <loc>http://www.manuscript.com/pricing</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <priority>0.8</priority>
+  <loc>http://www.manuscript.com/enterprise</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/jira-alternative</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/github-issues-alternative</loc>
+  <changefreq>weekly</changefreq>
+</url> 
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/task-management</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/time-tracking</loc>
+  <changefreq>weekly</changefreq>
+</url> 
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/smart-scheduling</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/support-helpdesk</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/crash-reporting</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/integrated-wiki</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/scrum-boards</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/kanban-boards</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/version-control</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/code-reviews</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/security</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/eula</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/privacy</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/git</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/mercurial</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+<url>
+  <priority>0.6</priority>
+  <loc>http://www.manuscript.com/features/infrastructure</loc>
+  <changefreq>weekly</changefreq>
+</url>  
+</urlset>

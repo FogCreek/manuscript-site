@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle PageTitle--integrations PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      Integrations
+    </h1>
+    <h2 class="PageTitle__subheader">
+      Connect the tools you use with Manuscript
+    </h2>
+    <div class="PageTitle__background"></div>
+  </div>
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fslack-symbol.svg?1509641097289" class="Subsection__header-icon" alt="Slack logo" />
+          Slack
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            See a Manuscript case summary in Slack whenever you link to or mention a case. The case number, project, area, title, status, assignee, priority, and most recent edit are shown, so you and the people you’re chatting with have all the context they need.
+          </p>
+          <p>
+            Use Slash commands to add new cases and update existing ones from within Slack.         
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fgithub%20(1).svg?1509641177059" class="Subsection__header-icon" alt="Three people" />
+          GitHub
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Automatically create Bug Events in Manuscript cases when pushing commits to a GitHub repository. So you can track the work done on a particular case, and provide context about why a changeset was committed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--blue">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2FtwitterWhite.svg?1509640761828" class="Subsection__header-icon" alt="A hand holding cables" />
+          Twitter
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Monitor Twitter for tweets that mention keywords you’re interested in, like @mentions and hashtags. A case is created in Manuscript for each match. It’s great for Support teams managing a Twitter queue, and for Product teams gathering feedback.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ftrello-website-logo.svg?1509640913663" class="Subsection__header-icon" alt="A person on a comupter" />
+          Trello
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Search for, and add Manuscript cases directly into Trello cards. So you can see the case number, title, amount of time remaining or status, assignee, and time of the last edit for each case. You can also click directly to a specific case straight from the card.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fsearch.svg?1509641227027" class="Subsection__header-icon" alt="A cup of hot coffee" />
+          Google Drive
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Automatically link documents in Google Drive to Manuscript cases. You get a handy link taking you from Manuscript straight to the document you need.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="Subsection Subsection--pink">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          <img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fhow-glitch.svg?1509504435711" class="Subsection__header-icon" alt="Glitch fish" />
+          Create your own
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            With our <a href="https://api.manuscript.com" target="_blank">API</a> and the power of <a href="https://glitch.com" target="_blank">Glitch</a>, our friendly collaborative coding community, you can create your own integrations and edit existing ones to do exactly what you need.</p>
+          <p>
+            You don’t need to start from scratch. Remix integrations created by the <a href="https://glitch.com/manuscript" target="_blank">Manuscript community on Glitch</a>, or quickly start creating new ones using our <a href="https://glitch.com/~hello-manuscript" target="_blank">"Hello World" starter project</a>.
+          </p>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        
+      </div>
+    </div>     
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block"></div>
+  <div class="Section__content">
+    <div class="GetStartedBottom__copy">
+      <h4 class="GetStartedBottom__header">
+          Learn how Manuscript works:
+      </h4>
+      <p class="GetStartedBottom__subheader">
+        The first 14 days are on us. No credit card required.
+      </p>
+    </div>
+    {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='aqua', buttonColor='blue') }}
+  </div>
+</section>
+
+{% endblock content %}

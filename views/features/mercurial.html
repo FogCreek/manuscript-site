@@ -1,0 +1,50 @@
+{% extends "./base.html" %}
+
+{% block feature_top_container %}{% endblock %}
+
+{% block page_title %}
+
+<section class="Section PageTitle PageTitle--feature">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+    About Mercurial
+    </h1>
+    <h2 class="PageTitle__subheader">
+    Similar to SVN, permanent history and built-in Windows support.
+    </h2>
+    <div>
+      <br /><br /><br /><br /><br /><br /><br />
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block feature_main %}
+<div class="FeatureBlock">
+  <h4 class="GraphicExample__title">
+    Why Mercurial?
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Mercurial is a cross-platform, distributed version control system (DVCS) for software developers. It’s supported on MS Windows and Unix-like systems, such as FreeBSD, Mac OS X and Linux.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Easier migration from SVN
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Mercurial commands are similar to those of Subversion. If your team uses Subversion (SVN), the transition to Mercurial (hg) is easier than it would be to Git. Mercurial commands are straightforward — with quick access to information with 'hg help'.
+</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Safe, permanent commit history
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Aside from 'hg rollback', which undoes the last action, the history is otherwise permanent with Mercurial. Mercurial’s permanent history is better for newer users, who might otherwise alter their history in unexpected ways. Advanced users can add history-altering functionality with extensions.</p>
+  </div>
+  <h4 class="GraphicExample__title">
+    Windows support
+  </h4>
+  <div class="FeatureBlock__body">
+    <p>Mercurial was built with first class support for Windows environments. Using Mercurial, there’s no need for third-party implementations to support a Windows development environment.</p>
+  </div>    
+</div>
+{% endblock %}

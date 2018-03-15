@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      Log in to your Manuscript
+    </h1>
+  </div>
+</section>
+
+<section class="Section Login">
+  <div class="Section__content">
+    <form id="login-form" class="Form Form--login" method="POST">
+      <header class="Form__section-header-group">
+        <div class="Form__section-header">
+          Enter your team name
+        </div>
+        <div class="Form__section-description">
+          We'll take you to your login page.  You can also <a href="https://www.fogcreek.com/contact">contact us</a> for help.
+        </div>
+      </header>
+      <div class="Form__fields">
+        {{ forms.URLInput(name='subdomain', placeholder='yourcompany', type='text', required=true, pattern='(^[a-zA-Z0-9]+$)|(^[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9]$)', title='Team names can contain letters, numbers, and hyphens, but cannot start or end with a hyphen.')}}
+        <div class="Form__field-note subdomain"></div> 
+      </div>
+      {{ forms.Button(label='Let’s Go!', type='submit', color='blue')}}
+    </form>
+
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+<script src="/login.js"></script>
+{% endblock content %}

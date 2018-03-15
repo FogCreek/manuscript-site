@@ -1,0 +1,1392 @@
+.wrapper {
+  position: relative;
+  width: 100vw;
+
+  @media (min-width: $max-wrapper-width) {
+    max-width: $max-wrapper-width;
+    margin: 0 auto;
+
+    &:before {
+      top: 0;
+      content: "";
+      position: absolute;
+      height: 100%;
+      right: 100%;
+      width: 100%;
+      background: #e6e6ed;
+      z-index: 100;
+    }
+    &:after {
+      top: 0;
+      content: "";
+      position: absolute;
+      height: 100%;
+      left: 100%;
+      width: 100%;
+      background: #e6e6ed;
+      z-index: 100;
+    }
+  }
+}
+
+.SiteHeader {
+  @include Section($anchor: left);
+  @mixin header-color-block($top, $height, $color) {
+    position: absolute;
+    transform: skewY(15deg);
+    width: 200em;
+    height: ($height + .05);
+    background-color: $color;
+    top: $top;
+    right: -125em;
+    z-index: -1;
+
+    @media (min-width: $bp-large) {
+      transform: skewY(30deg);
+      right: -103em;
+    }
+  }
+  
+  min-height: 3em;
+  
+  @media (min-width: $bp-medium) {
+    min-height: 6.4em; // 96px
+  }
+
+  &__color-block {
+    @include header-color-block(-10em, 20em, $purple);
+  }
+
+  &__color-border--1 {
+    @include header-color-block(10em, 0.6em, $pink);
+    @media (min-width: $bp-large) {
+      height: 1.3em;
+    }
+
+  }
+  &__color-border--2 {
+    @include header-color-block(10.59em, 0.6em, $green);
+    @media (min-width: $bp-large) {
+      top: 11.25em;
+      height: 1.3em;
+    }
+  }
+  &__color-border--3 {
+    @include header-color-block(11.18em, 0.6em, $purple);
+    @media (min-width: $bp-large) {
+      top: 12.5em;
+      height: 1.3em;
+    }
+  }
+
+}
+
+.SiteLogo {
+  font-size: 3em;
+  margin: 0;
+
+  &__image {
+    max-width: 20rem;
+    width: 20rem;
+    height: auto;
+  }
+
+  &.SiteNav__item {
+    font-size: 1em;
+    position: fixed;
+    z-index: $z-index-top;
+    top: (2em / 3);
+    left: (2em / 3);
+    
+    @media (min-width: $bp-medium) {
+      position: static;
+      display: block;
+    }
+
+    
+    .SiteLogo__picture {
+
+      @media (min-width: $bp-medium) {
+        margin-right: 2em;
+      }
+
+      @media (min-width: $bp-large) {
+        margin-right: 4em;
+      }
+    }
+
+    .SiteLogo__source {
+      max-width: 14em;
+      max-height: 2.4em;
+      width: 3em;
+
+      @media (min-width: $bp-medium) {
+        max-height: 3em;
+      }
+      
+      @media (min-width: $bp-medium + 6) {
+        width: 10em;
+      }
+      @media (min-width: $bp-large) {
+        width: auto;
+      }
+    }
+  }
+
+}
+
+@keyframes nav_in {
+  from {
+    top: -8em;
+  }
+  
+  to {
+    top: 0;
+  }
+}
+
+.SiteNav {
+  width: 100%;
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: fade-out($white, 0.1);
+    z-index: $z-index-top;
+    animation: 300ms nav_in;
+    
+    .SiteNav__content {
+      justify-content: space-between;
+      padding: ($grid-gutter / 2) $grid-gutter;
+    }
+  }
+  
+  &__button {
+    position: fixed;
+    z-index: $z-index-top;
+    top: 1em;
+    right: 1em;
+    border-radius: $border-radius;
+    font: #{(2em / 3)}/1 "Benton Sans Bk";
+    color: $white;
+    background-color: fade-out($black, 0.75);
+    width: 3.6em;
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    transition: 300ms background-color;
+    
+    &:hover,
+    &.is-activated {
+      cursor: pointer;
+      background-color: fade-out($black, 0.3);
+    }
+
+    
+    @media (min-width: $bp-medium) {
+      display: none;
+    }
+  }
+  
+  @mixin hamburger {
+    background: $white;
+    height: .5em;
+    border-radius: $border-radius;
+  }
+  
+  &__button-hamburger {
+    @include hamburger;
+    position: relative;
+    margin: 0.8em 0 1em;
+        
+    &:before,
+    &:after {
+      content: "";
+      @include hamburger;
+      width: 100%;
+      position: absolute;
+      top: -0.8em;
+    }
+      
+      &:after {
+        top: 0.8em;
+      }
+    
+  }
+  
+  &__button-text {
+    text-transform: uppercase;
+    display: none;
+    margin-top: 0.2em;
+    
+    .SiteNav__button:hover &,
+    .SiteNav__button.is-activated & {
+      display: block;
+    }
+  }
+  
+  &__content {
+    position: fixed;
+    z-index: $z-index-top;
+    top: 3.75em;
+    right: (2em / 3);
+    width: 11em;
+    padding: 0 0 1.333333em;
+    background: transparent;
+    border-radius: $border-radius;
+    
+    .SiteNav[data-menu-visible=true] & {
+      background: fade-out($black, 0.3);
+      padding: 0 0 1.333333em;
+    }
+    
+    @media (min-width: $bp-medium) {
+      position: static;
+      max-width: $max-width;
+      width: auto;
+      background: transparent;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1em 0 2em;
+
+      [data-page=homepage] & {
+        justify-content: center;
+      }
+    }
+  }
+  
+  &__links {
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms opacity;
+
+    .SiteNav[data-menu-visible=true] & {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    @media (min-width: $bp-medium) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+    display: inline-block;
+
+    &.Button {
+      margin: 1em 1em 0;
+
+      @media (min-width: $bp-medium) {
+        margin: 0 1em;
+      }
+    }
+  }
+  
+  &__item--link {
+    // Benton Sans Medium
+    font: .8em/1 "Benton Sans Med";
+    font-style: Normal;
+    font-weight: Normal;
+    color: $white;
+    border-radius: $border-radius;
+    padding: 1.5em 1.666666em 0.5em;
+    text-align: right;
+    width: 100%;
+    
+    @media (min-width: $bp-medium) {
+      font: 1em/1.3333333 "Benton Sans Med";
+      padding: 1em;
+      width: auto;
+      color: $deep-blue;
+
+    }
+
+    &:hover {
+      background: $blue;
+      color: $white;      
+    }
+  }
+}
+
+[data-page=homepage] {
+  .SiteNav__item--SiteLogo {
+    display: none;
+  }
+  
+  .SiteNav.is-fixed {
+    .SiteNav__item--SiteLogo {
+      display: block;
+    }
+  }
+}
+
+.GetStarted {
+  padding-top: 1em;
+
+  &__header {
+    @include type-header-secondary;
+    margin: 0;
+  }
+
+  &__subheader {
+    @include type-body;
+    color: $gray-dark;
+    margin-bottom: 1em;
+  }
+}
+
+.GetStartedForm {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  &--top {
+    @media (min-width: $bp-large) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+  }
+
+  &--bottom {
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    max-width: $column-width * 4;
+  }
+  
+  &--pricing {
+    max-width: $column-width * 4;
+    @media (min-width: $bp-medium) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: $column-width * 5;  
+    }
+    @media (min-width: $bp-large) {
+      max-width: $column-width * 6;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin: 0 0 .5em 0;
+
+    .GetStartedForm--top &,
+    .GetStartedForm--pricing & {
+      @media (min-width: $bp-large) {
+        margin: 0 .5rem 0 0;
+        flex: 1 1 auto;
+        width: $column-width * 3;
+      }
+    }
+  }
+
+  &__submit {
+    flex: 0 0 auto;
+    width: $column-width * 2;
+    margin: 0 0 0 .5em;
+
+    .GetStartedForm--top,
+    .GetStartedForm--pricing & & {
+      @media (min-width: $bp-large) {
+        flex: 1 1 auto;
+        margin: 0 0 0 .5em;
+      }
+    }
+
+  }
+
+  &__privacy-link {
+    @include type-body-small;
+    color: $gray-dark;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.LogIn {
+  padding-top: 1em;
+  float: right;
+  padding-right: 2em;
+}
+
+.QuotePopouts {
+  position: relative;
+  transform: rotate(-15deg);
+  top: 7.5em;
+
+  @media (min-width: $bp-medium) {
+    top: 5em;
+  }
+
+  @media (min-width: $bp-large) {
+    transform: rotate(-30deg);
+    top: -5em;
+  }
+
+  @media (min-width: $bp-max) {
+    top: 15vw;
+    position: absolute;
+    left: calc(50% - 65vw);
+  }
+}
+
+.QuotePopout {
+  position: relative;
+  width: 110vw;
+  padding: 1em;
+  margin-bottom: 2rem;
+  bottom: 0;
+  // Benton Sans Light
+  font: 1em/1.2 "Benton Sans Lt";
+  font-style: Normal;
+  font-weight: Normal;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (min-width: $bp-medium) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: $bp-large) {
+    font-size: 1.5em;
+  }
+
+  strong {
+    // Benton Sans Bold
+    font-family: "Benton Sans Bd";
+    font-style: Normal;
+    font-weight: Normal;
+  }
+
+  &__copy {
+    margin-right: 3rem;
+    max-width: 15em;
+    text-align: right;
+
+    @media (min-width: $bp-small) {
+      text-align: left;
+      max-width: 20em;
+    }
+
+    @media (min-width: $bp-medium) {
+      max-width: 25em;
+    }
+  }
+
+  &__endcap {
+    height: 100%;
+    width: 2.25rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left-width: .75rem;
+    border-right-width: .75rem;
+    border-top: 0;
+    border-bottom: 0;
+    border-style: solid;
+  }
+
+  &--big {
+    @include type-header-secondary;
+    line-height: 1;
+    padding: 0.8333333em;
+  }
+
+  &:first-of-type {
+    right: 5vw;
+
+    @media (min-width: $bp-xsmall) {
+      right: 10vw;
+    }
+
+    @media (min-width: $bp-medium * 1.1) {
+      right: 55vw;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    right: 15vw;
+
+    @media (min-width: $bp-xsmall) {
+      right: 25vw;
+    }
+
+    @media (min-width: $bp-medium * 1.1) {
+      right: 45vw;
+    }
+  }
+  &:nth-of-type(3n) {
+    right: 25vw;
+
+    @media (min-width: $bp-xsmall) {
+      right: 20vw;
+    }
+
+    @media (min-width: $bp-medium * 1.1) {
+      right: 50vw;
+
+      .QuotePopout__copy {
+        max-width: 20em;
+      }
+
+    }
+  }
+  &:nth-of-type(4n) {
+    right: 25vw;
+
+    @media (min-width: $bp-xsmall) {
+      right: 40vw;
+    }
+
+    @media (min-width: $bp-medium * 1.1) {
+      right: 40vw;
+
+      .QuotePopout__copy {
+        max-width: 22em;
+      }
+    }
+  }
+
+}
+
+.QuotePopout--red {
+  background: $red;
+
+  .QuotePopout__endcap {
+    background-color: $yellow;
+    border-right-color: $red;
+    border-left-color: $green;
+  }
+}
+
+.QuotePopout--purple {
+  background: $purple;
+
+  .QuotePopout__endcap {
+    background-color: $yellow;
+    border-right-color: $purple;
+    border-left-color: $green;
+  }
+}
+
+.QuotePopout--pink {
+  background: $pink;
+
+  .QuotePopout__endcap {
+    background-color: $red;
+    border-right-color: $pink;
+    border-left-color: $purple;
+  }
+}
+
+.QuotePopout--green {
+  background: $green;
+
+  .QuotePopout__endcap {
+    background-color: $pink;
+    border-right-color: $green;
+    border-left-color: $green;
+  }
+}
+
+
+
+.BigTextCallout {
+  margin-bottom: 2em;
+
+  &--right {
+    display: flex;
+    text-align: right;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+
+  }
+
+  &__header {
+    @include type-header-primary;
+    max-width: $column-width * 3;
+    margin: 0 0 .125em 0;
+
+    .BigTextCallout--flipped & {
+      @include type-header-primary-xlarge;
+    }
+
+    @media (min-width: $bp-small) {
+      .BigTextCallout--wide & {
+        max-width: $column-width * 4;
+      }
+    }
+
+    @media (min-width: $bp-large) {
+      max-width: $column-width * 4;
+
+      .BigTextCallout--wide & {
+        max-width: 54rem;
+      }
+    }
+
+  }
+
+  &__subheader {
+    @include type-subheader-primary;
+    margin: 0;
+    max-width: $column-width * 4;
+
+    // Benton Sans Light
+    .BigTextCallout--flipped & {
+      @include type-subheader-primary-xlarge;
+      font-family: "Benton Sans Lt";
+      font-style: Normal;
+      font-weight: Normal;
+      margin-bottom: .5em;
+    }
+
+    @media (min-width: $bp-large) {
+      max-width: $column-width * 5;
+
+      .BigTextCallout--wide & {
+        max-width: 54rem;
+      }
+    }
+  }
+
+  &__action {
+    margin: 1rem 0;
+  }
+}
+
+.FeatureMain .GraphicExample__title {
+  margin-bottom: 0.5em;
+}
+
+.GraphicExample {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin-bottom: 2em;
+
+  @media (min-width: $bp-medium) {
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    margin-bottom: 5em;
+
+  }
+
+  &__graphic {
+    max-width: 26rem;
+    flex: 1 1 auto;
+    order: 2;
+
+    @media (min-width: $bp-medium) {
+      margin: 0 3em 0 0;
+      order: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%
+  }
+
+  &__title {
+    @include type-header-secondary;
+    margin-bottom: 0;
+    img.icon {
+      max-height: 1.5em;
+      max-width: 1.5em;
+      position: relative;
+      top: 0.4em;
+    }
+  }
+
+  &__copy {
+    max-width: $column-width * 4;
+    text-align: center;
+    order: 1;
+
+    @media (min-width: $bp-medium) {
+      max-width: 24em;
+      text-align: left;
+      align-self: center;
+      order: 2;
+    }
+
+    p {
+      @include type-body-tight;
+      margin: 0 0 1em;
+    }
+  }
+}
+
+.GraphicExample--reverse {
+  flex-direction: row-reverse;
+
+  .GraphicExample__graphic {
+    @media (min-width: $bp-medium) {
+      margin: 0 0 0 3em;
+    }
+  }
+}
+
+.Button {
+  outline: 0;
+  border: 0;
+  -webkit-appearance: unset;
+
+  border-radius: $border-radius;
+  display: inline-block;
+  width: $column-width * 1.5;
+  padding: .666666em 0;
+  color: $white;
+  background: $blue;
+  border: 1px solid $blue;
+  text-align: center;
+  // Benton Sans Bold
+  font: #{(4em / 3)}/1 "Benton Sans Bd";
+  font-style: Normal;
+  font-weight: Normal;
+  text-decoration: none;
+
+  @media (min-width: $bp-large) {
+    width: $column-width * 2;
+    font-size: (5em / 3);
+    padding: .5em 0;
+  }
+
+  &:hover {
+    background: transparent;
+    color: $blue;
+    cursor: pointer;
+  }
+
+  &--nav {
+    width: calc(100% - 2em);
+    // Benton Sans Medium
+    font: 1em/#{(4 / 3)} "Benton Sans Med";
+    font-style: Normal;
+    font-weight: Normal;
+    padding: 1em 0;
+    background-color: $yellow;
+    border-color: $yellow;
+
+    &:hover {
+      color: $blue;
+      background-color: $white;
+      border-color: $white;
+    }
+
+    @media (min-width: $bp-medium) {
+      width: 12em;
+      
+      &:hover {
+        background-color: transparent;
+        border-color: $yellow;
+        color: $yellow;
+      }
+      
+    }
+
+  }
+
+  &--submit {
+    background-color: $red;
+    border-color: $red;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &--blue {
+    background-color: $blue;
+    border-color: $blue;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+
+.Form {
+  margin-bottom: 5em;
+
+  &__section-header-group {
+    margin: 2em 0 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  &__section-header {
+    @include type-header-secondary-book;
+    margin: 0 .25em .25em 0;
+    flex: 0 0 auto;
+  }
+
+  &__section-subheader {
+    @include type-body;
+    margin: 0 .25em 0 0;
+    flex: 0 0 auto;
+  }
+
+  &__section-description {
+    @include type-body;
+    margin: 0 .25em 0 0;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  &__fields {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  // The flex-basis of each is defined by each form.
+  &__field-column {
+    $spacing: 1em;
+    flex: 1 1 100%;
+
+    @media (min-width: $bp-medium) {
+      flex-grow: 0;
+      flex-basis: 50%;
+
+      &:nth-of-type(2n + 1) {
+        padding-right: $spacing * 2;
+      }
+
+      .Form--contact & {
+        &:first-of-type {
+          flex-basis: 40%;
+        }
+        &:last-of-type {
+          flex-basis: 60%;
+        }
+      }
+    }
+
+  }
+
+  &__field {
+    $spacing: 1em;
+    flex: 1 1 100%;
+    margin: 0 0 $spacing 0;
+    position: relative;
+
+    &.has-error {
+      &:after {
+        content: "";
+        position: absolute;
+        background: url(https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Ferror.svg?1509081929164) 0 0 no-repeat;
+        background-size: cover;
+        width: 2em;
+        height: 2em;
+        right: 6px;
+        top: .5em;
+        @media (min-width: $bp-medium) {
+          right: 36px;
+        }
+      }
+    }
+
+    &--half-width {
+      @media (min-width: $bp-medium) {
+        flex-grow: 0;
+        flex-basis: 50%;
+        margin-bottom: $spacing;
+        padding-right: $spacing * 2;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    .Form__field.has-error & {
+      background: $white;
+      border: 1px solid $black;
+      color: $red;
+      font-weight: bold;
+      padding-right: 3em;
+
+      &::placeholder {
+        color: $red;
+      }
+    }
+
+    .Form__field--file & {
+      padding-left: 1em;
+    }
+  }
+
+  &__field-note {
+    @include type-body-xsmall;
+    color: $gray-dark;
+    height: 1.25em;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 1.25em;
+
+    .Form__field.has-error & {
+      color: $red;
+    }
+    &.global {
+      @include type-body-large;
+      color: $red;
+      padding-left: 0;
+    }
+    &.subdomain {
+      color: $red;
+      align-self: center;
+      @include type-body-large;
+      margin-bottom: 16px;
+      flex-direction: column;
+      &.empty {
+        color: $gray-dark;
+      }
+      &.available {
+        color: $green;
+      }
+      .note {
+        padding: 0 1.25em;
+        @include type-body-xsmall;
+        color: $gray-dark;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    @media (min-width: $bp-medium) {
+      padding-right: 2em;
+    }
+  }
+
+  &__submit {
+    margin-left: 1em;
+  }
+}
+
+.URLInputGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  max-width: $column-width * 5;
+  flex: 1 1 auto;
+  margin-bottom: .5em;
+  flex-wrap: wrap;
+
+  &__prefix {
+    @include type-body;
+    max-width: 100%;
+    margin: 0 .5em 0 0;
+    flex: 0 0 auto;
+    display: none;
+
+    @media (min-width: $bp-small) {
+      display: block;
+    }
+  }
+
+  &__postfix {
+    @include type-body;
+    max-width: 100%;
+    margin: 0 0 0 .5em;
+    flex: 0 0 auto;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    margin-bottom: .5em;
+  }
+}
+
+.TextInput,
+.Textarea {
+  background-color: $yellow;
+  color: $white;
+  border: 0;
+  padding: 1em;
+  border-radius: $border-radius;
+  font: 1em/1 "Benton Sans Bk";
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 3px 3px 0 $gray-light;
+  }
+  
+  &.submitting {
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $yellow;
+  }
+
+  &--aqua   { 
+    background-color: $aqua; 
+    &.submitting { background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $aqua;}
+    
+  }
+  &--pink   { 
+    background-color: $pink; 
+    &.submitting { background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $pink;}
+  }
+  &--green  { 
+    background-color: $green; 
+    &.submitting { background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $green;}
+  }
+  &--yellow { 
+    background-color: $yellow; 
+    &.submitting {background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $yellow;}
+  }
+  &--gray   { 
+    background-color: $gray-dark; 
+    &.submitting {background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $gray-dark;}
+  }
+  &--red    { 
+    background-color: $red;
+    &.submitting {background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $red;}
+  }
+  &--purple { 
+    background-color: $purple;
+    &.submitting {background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), $purple;}
+  }
+
+  &--large {
+    font: #{(20em / 15)}/1 "Benton Sans Lt";
+    background: transparent;
+    border: (2rem / 3) solid $aqua;
+    color: $black;
+    width: 100%;
+
+    &::placeholder {
+      color: $gray-dark;
+    }
+
+    @media (min-width: $bp-medium) {
+      font-size: (25em / 15);
+      padding: 0.5em 0.4em;
+    }
+  }
+}
+
+.Textarea {
+  height: 5em;
+  line-height: 1.3;
+
+  &--large {
+    height: 10.333333em;
+    line-height: 1.3;
+  }
+}
+
+.CheckboxInput {
+  &__input {
+    margin-right: (2em / 3);
+  }
+
+  &__label {
+    @include type-body-small
+  }
+}
+
+.SocialIcons {
+  font-size: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 4em;
+
+  &__item {
+    border: 5px solid $purple;
+    border-radius: 50%;
+    height: .8em;
+    width: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms;
+
+    &:hover {
+      background: $purple;
+
+      .SocialIcons__image {
+        fill: $white;
+      }
+    }
+
+    .SocialIcons--white & {
+      border-color: $white;
+
+      &:hover {
+        background: $white;
+
+        .SocialIcons__image {
+          fill: $green;
+        }
+      }
+    }
+  }
+
+  &__image {
+    height: .375em;
+    width: auto;
+    fill: $purple;
+
+    .SocialIcons--white & {
+      fill: $white;
+    }
+
+    &.icon-linkedin {
+      position: relative;
+      top: -1px;
+      height: .35em;
+    }
+  }
+}
+
+.FooterCopy {
+  &__item {
+    display: block;
+    @include type-body-small;
+    color: $black;
+    text-decoration: none;
+    margin-bottom: 1em;
+
+
+    &--header {
+      // Benton Sans Bold
+      font-family: "Benton Sans Bd";
+      font-style: Normal;
+      font-weight: Normal;
+    }
+  }
+}
+
+a.FooterCopy__item:hover {
+  text-decoration: underline;
+}
+
+.FeatureBlock {
+  color: $black;
+
+  &__header {
+    @include type-header-primary;
+    max-width: $column-width * 6;
+    margin: 0;
+  }
+
+  &__subheader {
+    @include type-subheader-primary;
+    max-width: $column-width * 6;
+    color: $gray-dark;
+    margin: 0 0 1em;
+  }
+
+  &__body {
+    @include type-body;
+
+    p, li {
+      max-width: $column-width * 5;
+      margin: 0 0 1em;
+    }
+
+    img {
+      max-width: $column-width * 8;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.HowItWorksVideo {
+  max-width: $column-width * 8;
+  margin: 0 auto 3em;
+  
+  &__container {
+    position: relative;
+    padding-top: 56.25%;
+  }
+
+  &__embed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.TextLink {
+  @include type-text-link;
+}
+
+.purple {
+  color: #8959F6
+}
+
+.pricing-table.notMobileTable {
+  display: none;
+  @media (min-width: $bp-medium) {
+      display: table;
+  }
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+
+  .logo {
+    width: 30px;
+  }
+  .bold {
+    font-weight: bolder;
+  }
+  
+  thead th{
+    vertical-align: top;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  tbody th { 
+    width: 16%;
+    max-width: 16%;
+    text-align: left;
+    .pricing-table__feature-name {
+      color: #696d7b;
+    }
+  }
+  tbody td{
+    width: 16%;
+    max-width: 16%;
+    text-align: center;
+    border-bottom: 1px solid #dfe3e8;
+    background-color: lightblue;
+  }
+  tbody td.header, tbody th.none {
+    border-bottom: none;
+    background-color: white;
+  }
+  tbody th.bheader {
+    border-bottom: none;
+    text-align: center;
+    background-color: lightblue !important;
+  }  
+  tbody td.comparison-label {
+    text-align: right;
+  }
+  tbody td.comparison-price {
+    text-align: center;
+    background-color: white;
+  }
+  tbody td.bottom {
+    text-align: center;
+    background-color: #f4f6f8;
+  }  
+  tr {
+    th {
+    background-color: #f4f6f8;
+    font-weight: normal;
+    }
+    th.comparison-price {
+      text-align: center;
+    }
+  }
+  th, td{
+    padding: 5px 5px;
+    @media (min-width:medium){
+      padding: 10px 15px;
+    }
+    @media (min-width:large){
+      padding: 10px 15px;
+    }
+    @media (min-width:extralarge){ 
+      padding: 10px 15px;
+    }
+  }
+}
+
+.pricing-table.mobileTable {
+  display: table;  
+  @media (min-width: $bp-medium) {
+    display: none;
+  }
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+
+  .logo {
+    width: 30px;
+  }
+  
+  thead th{
+    vertical-align: top;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  tbody th { 
+    width: 25%;
+    max-width: 25%;
+    text-align: left;
+    .pricing-table__feature-name{
+      color: #696d7b;
+    }
+  }
+  tbody td{
+    width: 25%;
+    max-width: 25%;
+    text-align: center;
+    border-bottom: 1px solid #dfe3e8;
+  }
+  tbody td.header {
+    border-bottom: none;
+  }
+  tbody td.comparison-label {
+    text-align: right;
+  }
+  tbody td.comparison-price {
+    text-align: left;
+  }
+  tr {
+  }
+  th{
+    background-color: #f4f6f8;
+    font-weight: normal;
+  }
+  th, td{
+    padding: 5px 5px;
+    @media (min-width:medium){
+      padding: 10px 15px;
+    }
+    @media (min-width:large){
+      padding: 10px 15px;
+    }
+    @media (min-width:extralarge){ 
+      padding: 10px 15px;
+    }
+  }
+}
+
+.header {
+  font-weight: bold;
+}

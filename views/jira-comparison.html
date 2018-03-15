@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block content %}
+<section class="Section PageTitle PageTitle--alternative PageTitle--feature PageTitle--titleimage PageTitle--has-background">
+  <div class="Section__content">
+    <h1 class="PageTitle__header">
+      JIRA Alternative
+    </h1>
+    <h2 class="PageTitle__subheader">
+      Manuscript: a simple to use, easily configured alternative to JIRA
+    </h2>
+    <div><br /><br /><br /><br /><br /></div>     
+    <div class="PageTitle__background"></div>
+  </div>
+
+</section>
+
+<section class="ContactDetails">
+  <div class="ContactDetails__color-border--1"></div>
+  <div class="ContactDetails__color-border--2"></div>
+  <div class="ContactDetails__color-border--3"></div>
+  <div class="ContactDetails__color-block"></div>
+
+  <div class="SubsectionColumn SubsectionColumn--left">
+    <div class="Subsection Subsection--aqua Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Atlassian JIRA customers switch to Manuscript because:
+        </h4>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--green">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          You can combine customer feedback and issues together
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Customer communication together with feature requests and bugs, means that your developers have all the context they need, without switching tools. Manuscript's smart AI sorts everything automatically.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--blue">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Search that just plain works
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Build a workflow that really works, with powerful searches that you can save, share and customize — with no special query language needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="SubsectionColumn SubsectionColumn--right">
+    <div class="Subsection Subsection--pink Subsection--with-multiple-icons">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Everything you need is in one place
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript combines Task Management, Smart Scheduling, Time Reporting, Agile Project Management and Code Management in a single tool.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="Subsection Subsection--red">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          Configuration is easy
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            No specially trained administrator required. It's easy for anyone to get started, so you can focus on getting work done.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Subsection Subsection--purple">
+      <div class="Subsection__color-block"></div>
+      <div class="Subsection__content">
+        <h4 class="Subsection__header">
+          All the tools you need in the box
+        </h4>
+        <div class="Subsection__body">
+          <p>
+            Manuscript helps your team use the best tools for the job, by seamlessly integrating with popular platforms like Slack, GitHub and Trello, at no additional cost.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block" id="comparison-chart"></div>
+  <div class="Section__content">
+
+    <div style="width: 100%; margin-top: 5em; margin-bottom: 7.5em;">
+      <h4 class="Subsection__header">
+        Easier to Get Started
+      </h4>
+      <div class="Subsection__body">
+        <p>
+          Compare: Manuscript gives you all the tools you need, in one product. No additional cost for Slack support, kanban boards or powerful AI-based inbox management. And you don’t have to pay an admin to manage it.
+        </p>        
+      </div>
+      <table class="pricing-table table table-bordered table-hover table-condensed" style="margin: 0 auto;">
+        <tbody><tr>
+        <td class="header"> </td>
+        <td class="header"><h3>Manuscript</h3></td>
+        <td class="header comparison-price"><h3>Jira</h3></td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Issue Tracking</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Core ($5/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Notifications</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Core</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Search</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Core</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Search that works</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price"> </td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Kanban boards</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Software ($7/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Agile workflow</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Software</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Customer submitted issues</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Service Desk ($20/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">ITIL PinkVerify™️</td>
+        <td>nope<span style="font-size: larger;"><br/>🤷</span></td>
+        <td class="comparison-price">Service Desk</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Knowledge Base</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Service Desk</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">AI-based inbox sorting</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price"></td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Free, customizable integrations using Glitch</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price"> </td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Direct, human support from the product team</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">Costs a lot extra</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Slack Integration</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">3rd party ($1 extra/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">GitHub Integration</td>
+        <td><img src="https://cdn.glitch.com/f7cc2604-c47d-48c7-ac8e-297e1e01f511%2Fmanuscript-logo-mark%20(2).svg?1509098920735" alt="Manuscript's got it!" style="width: 1.5em;"></td>
+        <td class="comparison-price">3rd party ($2 extra/user)</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label">Price per user per month</td>
+        <td>$10</td>
+        <td class="comparison-price">$10-$30/user</td>
+        </tr>
+        <tr>
+        <td class="header comparison-label"><h3>For 20 users:</h3></td>
+        <td class="header"><h3>$200</h3></td>
+        <td class="header comparison-price"><h3>$200-$600</h3></td> 
+        </tr>
+        </tbody>
+      </table> 
+    </div>     
+    
+  </div>
+</section>
+
+<section class="Section GetStartedBottom GetStartedBottom--enterprise">
+  <div class="GetStartedBottom__color-block"></div>
+  <div class="Section__content">
+    <div class="GetStartedBottom__copy">
+      <h4 class="GetStartedBottom__header">
+          Learn how Manuscript works:
+      </h4>
+      <p class="GetStartedBottom__subheader">
+        The first 14 days are on us. No credit card required.
+      </p>
+    </div>
+    {{ forms.GetStartedForm(location='bottom', showPrivacy=true, inputColor='aqua', buttonColor='blue') }}
+  </div>
+</section>
+
+{% endblock content %}

@@ -146,7 +146,7 @@ async function validateSignup(data) {
     HFB_fURL_helper: 1,
     HFB_fEnterBillingInfoNow: "False",
     HFB_fTOSChecked:"True",
-    HFB_fManuscript: 1,
+    HFB_fBroadStreet: 0,
   };
   
   // Validation: check against nameTest

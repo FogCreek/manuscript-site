@@ -698,7 +698,9 @@
         line-height: 20px;
         flex-basis: 50%;
         font-size: 1.2em;
+        appearance: none;
         -webkit-appearance: none;
+        -moz-appearance: none;
         text-align-last: center;
         &:focus {
          outline: none; 

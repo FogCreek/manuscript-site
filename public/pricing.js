@@ -32,15 +32,18 @@ function price() {
   var numMonths = 12;
   var monthlyTotal = NaN;
   var grandTotal = NaN;
+  var numYears = " total for one year";
     
   if($('.active').attr('id') == 'oneYear') {
     discount = 0.9; //10% discount
   } else if ($('.active').attr('id') == 'twoYears') {
     discount = 0.85; //15%
     numMonths = 24;
+    numYears = " total for two years";
   } else if ($('.active').attr('id') == 'threeYears') {
     discount = 0.825; //17.5%
     numMonths = 36;
+    numYears = " total for three years";
   }
   
   if (includeKiln) {
@@ -58,7 +61,7 @@ function price() {
     $('.OnPrem').hide();
     $('.OnDemand .Table, .AddKilnCheckbox, form').show()
     $('.InfoBox .monthly').text("$" + Math.round(monthlyTotal).toLocaleString() + "/month");
-    $('.InfoBox .annual').text("$" + Math.round(grandTotal).toLocaleString() + " total");
+    $('.InfoBox .annual').text("$" + Math.round(grandTotal).toLocaleString() + numYears);
   };
 };
 
